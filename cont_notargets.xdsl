@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<equation id="alt">
+			<definition>alt=Normal(5014.01,2483.02)</definition>
+		</equation>
+		<equation id="Mach">
+			<definition>Mach=Normal(0.547682,0.120007)</definition>
+		</equation>
+		<equation id="TRA">
+			<definition>TRA=Normal(61.5584,18.1994)</definition>
+		</equation>
+		<equation id="T2">
+			<parents>alt TRA</parents>
+			<definition>T2=-0.00452098*alt+0.0234527*TRA+Normal(292.458,1.85669)</definition>
+		</equation>
+		<equation id="T40">
+			<definition>T40=Normal(1412.48,97.3668)</definition>
+		</equation>
+		<equation id="P30">
+			<definition>P30=Normal(1713.27,424.599)</definition>
+		</equation>
+		<equation id="P45">
+			<parents>P30</parents>
+			<definition>P45=0.179309*P30+Normal(-4.12887,2.13048)</definition>
+		</equation>
+		<equation id="W21">
+			<parents>TRA</parents>
+			<definition>W21=-1.0508*TRA+Normal(937.418,164.319)</definition>
+		</equation>
+		<equation id="W22">
+			<parents>P30 W21</parents>
+			<definition>W22=0.0280207*P30+0.0284109*W21+Normal(3.98858,0.746257)</definition>
+		</equation>
+		<equation id="W32">
+			<definition>W32=Normal(5.30887,1.16109)</definition>
+		</equation>
+		<equation id="W48">
+			<parents>W22</parents>
+			<definition>W48=0.965246*W22+Normal(-2.2027,0.101678)</definition>
+		</equation>
+		<equation id="SmFan">
+			<parents>Mach</parents>
+			<definition>SmFan=10.577*Mach+Normal(13.0599,1.54998)</definition>
+		</equation>
+		<equation id="fan_eff_mod">
+			<definition>fan_eff_mod=Normal(-0.00240052,0.00306193)</definition>
+		</equation>
+		<equation id="fan_flow_mod">
+			<parents>W21 SmFan fan_eff_mod</parents>
+			<definition>fan_flow_mod=-1.89991e-06*W21-0.00028347*SmFan+1.11981*fan_eff_mod+Normal(0.00635989,0.00339559)</definition>
+		</equation>
+		<equation id="T24">
+			<definition>T24=Normal(315.637,11.6088)</definition>
+		</equation>
+		<equation id="SmLPC">
+			<parents>SmFan</parents>
+			<definition>SmLPC=-0.306303*SmFan+Normal(14.0544,0.798258)</definition>
+		</equation>
+		<equation id="SmHPC">
+			<parents>T40 P30</parents>
+			<definition>SmHPC=-0.0305311*T40+0.00206352*P30+Normal(67.8908,0.306101)</definition>
+		</equation>
+		<equation id="P24">
+			<parents>P30 W21 SmLPC SmHPC</parents>
+			<definition>P24=0.0152178*P30+0.107666*W21+2.31247*SmLPC+2.12527*SmHPC+Normal(-91.5821,2.17401)</definition>
+		</equation>
+		<equation id="LPC_eff_mod">
+			<parents>T24 P24 fan_flow_mod</parents>
+			<definition>LPC_eff_mod=4.92554e-06*T24-1.17385e-05*P24+0.923418*fan_flow_mod+Normal(-0.00019666,0.00285909)</definition>
+		</equation>
+		<equation id="T30">
+			<parents>T40 T24</parents>
+			<definition>T30=0.271243*T40+1.14205*T24+Normal(-3.96448,1.10643)</definition>
+		</equation>
+		<equation id="W50">
+			<parents>W22 W48</parents>
+			<definition>W50=0.0552699*W22+0.999719*W48+Normal(-0.000489113,0.00088171)</definition>
+		</equation>
+		<equation id="phi">
+			<parents>T2 T40 SmFan</parents>
+			<definition>phi=-0.300856*T2+0.193624*T40-0.102149*SmFan+Normal(73.2466,0.651776)</definition>
+		</equation>
+		<equation id="T48">
+			<parents>T40 T30</parents>
+			<definition>T48=0.67156*T40+0.0515734*T30+Normal(-74.5644,0.931522)</definition>
+		</equation>
+		<equation id="T50">
+			<parents>T40 T30 T48</parents>
+			<definition>T50=-3.70956*T40+1.67262*T30+4.90166*T48+Normal(158.417,5.87246)</definition>
+		</equation>
+		<equation id="Ps30">
+			<parents>P30 P45 W48 W50 phi T50</parents>
+			<definition>Ps30=1.04602*P30-0.178809*P45-66.9629*W48+61.4081*W50-0.016904*phi+0.0577526*T50+Normal(-21.3276,0.27526)</definition>
+		</equation>
+		<equation id="LPC_flow_mod">
+			<parents>W22 fan_eff_mod fan_flow_mod LPC_eff_mod</parents>
+			<definition>LPC_flow_mod=-8.93088e-07*W22+0.564257*fan_eff_mod+0.0607844*fan_flow_mod+0.437835*LPC_eff_mod+Normal(-2.07415e-05,0.00159336)</definition>
+		</equation>
+		<equation id="HPC_eff_mod">
+			<parents>P30 T30 Ps30 fan_eff_mod LPC_eff_mod LPC_flow_mod</parents>
+			<definition>HPC_eff_mod=0.000226345*P30+3.02334e-05*T30-0.000242735*Ps30-0.0872798*fan_eff_mod-0.209593*LPC_eff_mod+0.612877*LPC_flow_mod+Normal(-0.0209132,0.00179188)</definition>
+		</equation>
+		<equation id="HPC_flow_mod">
+			<parents>fan_flow_mod LPC_eff_mod HPC_eff_mod</parents>
+			<definition>HPC_flow_mod=0.474966*fan_flow_mod-0.0656203*LPC_eff_mod+0.444835*HPC_eff_mod+Normal(-0.000243288,0.00107764)</definition>
+		</equation>
+		<equation id="P50">
+			<parents>alt T24</parents>
+			<definition>P50=-0.00636941*alt+0.359869*T24+Normal(-13.9184,2.39632)</definition>
+		</equation>
+		<equation id="P15">
+			<definition>P15=Normal(87.2512,19.8665)</definition>
+		</equation>
+		<equation id="P2">
+			<parents>alt P45 W22 SmFan P15</parents>
+			<definition>P2=-0.000294621*alt-0.0669512*P45-0.137416*W22+0.0633259*SmFan+1.09584*P15+Normal(3.47805,0.0873026)</definition>
+		</equation>
+		<equation id="Nf">
+			<parents>TRA P45 phi P50</parents>
+			<definition>Nf=2.18547*TRA+0.970826*P45+4.93237*phi-4.32329*P50+Normal(530.613,11.1051)</definition>
+		</equation>
+		<equation id="FANPR">
+			<parents>TRA T50 P2 Nf fan_eff_mod</parents>
+			<definition>FANPR=0.00527251*TRA+0.000335756*T50+1.62734e-05*P2-0.000143558*Nf+0.811847*fan_eff_mod+Normal(1.06019,0.00379335)</definition>
+		</equation>
+		<equation id="HPCPR">
+			<parents>SmLPC phi T24 T48 T50 P24 FANPR</parents>
+			<definition>HPCPR=0.265098*SmLPC+0.0183776*phi-0.0315916*T24+0.0254102*T48-0.0236279*T50+0.00420309*P24-0.305784*FANPR+Normal(10.4257,0.0771969)</definition>
+		</equation>
+		<equation id="LPCPR">
+			<parents>TRA P30 T24 T30 P2 P24 Ps30 Nf FANPR</parents>
+			<definition>LPCPR=0.00112739*TRA-0.000811259*P30-0.000226277*T24-0.000203333*T30-0.00262826*P2+0.00376973*P24+0.00073102*Ps30+0.000153873*Nf+0.0602116*FANPR+Normal(0.978051,0.000633347)</definition>
+		</equation>
+		<equation id="LPTPR">
+			<parents>P45 SmLPC T48 T50 P24 P50 Nf LPCPR</parents>
+			<definition>LPTPR=-2.1986e-05*P45+0.00672176*SmLPC-0.000856606*T48+0.00122836*T50+0.00150851*P24-0.00105791*P50-0.000462957*Nf+1.36068*LPCPR+Normal(-0.6542,0.00238358)</definition>
+		</equation>
+		<equation id="rho30">
+			<parents>P30 W48 phi T30 P24 Ps30 P50 HPCPR LPTPR</parents>
+			<definition>rho30=-7.05865e-05*P30+0.00022407*W48-1.02062e-06*phi-2.28876e-07*T30+1.36122e-06*P24+7.00629e-05*Ps30+3.60094e-07*P50+1.00213e-05*HPCPR-0.000166769*LPTPR+Normal(0.000294644,1.3458e-06)</definition>
+		</equation>
+		<equation id="W25">
+			<parents>T40 W22 W32 W48 HPC_flow_mod rho30</parents>
+			<definition>W25=-4.40264e-09*T40+0.000895176*W22+14.0967*W32+2.0162e-06*W48+2.10702e-05*HPC_flow_mod+0.00277448*rho30+Normal(1.88436,2.03293e-05)</definition>
+		</equation>
+		<equation id="W31">
+			<parents>W25 W32</parents>
+			<definition>W31=0.0415344*W25+1.08008*W32+Normal(-0.0783081,0.00304294)</definition>
+		</equation>
+		<equation id="P21">
+			<parents>SmLPC P15 FANPR LPCPR</parents>
+			<definition>P21=1.76951e-08*SmLPC+1.01523*P15-1.68383e-06*FANPR+2.54624e-06*LPCPR+Normal(-1.07475e-06,4.77583e-06)</definition>
+		</equation>
+		<equation id="P40">
+			<parents>T40 P30 P45 W22 W48 P24 Ps30</parents>
+			<definition>P40=-9.64501e-08*T40+0.954996*P30+2.80191e-06*P45+0.000144243*W22-0.000148177*W48-8.1677e-07*P24+4.14252e-06*Ps30+Normal(-0.000196218,0.000116874)</definition>
+		</equation>
+		<equation id="Nc">
+			<parents>T40 P45 T30 P50 Nf</parents>
+			<definition>Nc=-1.18802*T40-0.320416*P45+6.49445*T30+2.67204*P50+0.638186*Nf+Normal(3772.53,4.96595)</definition>
+		</equation>
+		<equation id="Wf">
+			<parents>TRA T40 P45 W22 W48 W50 phi Nc</parents>
+			<definition>Wf=0.000422603*TRA-0.000121438*T40+0.00159782*P45-1.9613*W22+1.23931*W48+0.786859*W50+0.000338284*phi-2.0418e-05*Nc+Normal(3.80709,0.00299997)</definition>
+		</equation>
+		<equation id="HPT_eff_mod">
+			<parents>P45 SmLPC T48</parents>
+			<definition>HPT_eff_mod=3.9407e-06*P45+0.00147573*SmLPC-2.40236e-05*T48+Normal(0.00629948,0.00216559)</definition>
+		</equation>
+		<equation id="HPT_flow_mod">
+			<parents>W48 fan_flow_mod LPC_flow_mod HPC_flow_mod HPT_eff_mod</parents>
+			<definition>HPT_flow_mod=-2.86005e-06*W48+0.168217*fan_flow_mod+0.0958879*LPC_flow_mod+0.249677*HPC_flow_mod+0.534526*HPT_eff_mod+Normal(0.000488624,0.00108694)</definition>
+		</equation>
+		<equation id="LPT_eff_mod">
+			<parents>SmHPC T50 P50 fan_eff_mod fan_flow_mod LPC_flow_mod HPC_flow_mod HPT_eff_mod HPT_flow_mod</parents>
+			<definition>LPT_eff_mod=-0.000310406*SmHPC-3.10621e-05*T50+4.51142e-05*P50-0.196629*fan_eff_mod+0.358855*fan_flow_mod+0.348654*LPC_flow_mod-0.5737*HPC_flow_mod+0.00934695*HPT_eff_mod+0.597255*HPT_flow_mod+Normal(0.0245047,0.00137347)</definition>
+		</equation>
+		<equation id="LPT_flow_mod">
+			<parents>W50 fan_eff_mod LPC_eff_mod HPC_eff_mod HPT_eff_mod HPT_flow_mod LPT_eff_mod</parents>
+			<definition>LPT_flow_mod=-3.31033e-06*W50+0.26243*fan_eff_mod+0.109629*LPC_eff_mod+0.140777*HPC_eff_mod+0.344245*HPT_eff_mod-0.0113979*HPT_flow_mod+0.135249*LPT_eff_mod+Normal(8.48368e-05,0.00133464)</definition>
+		</equation>
+		<equation id="RUL">
+			<parents>fan_eff_mod fan_flow_mod LPC_eff_mod LPC_flow_mod HPC_eff_mod HPC_flow_mod HPT_eff_mod HPT_flow_mod LPT_eff_mod LPT_flow_mod</parents>
+			<definition>RUL=1730.94*fan_eff_mod-139.152*fan_flow_mod-352.347*LPC_eff_mod-588.309*LPC_flow_mod+1769.98*HPC_eff_mod+1755.2*HPC_flow_mod+4089.54*HPT_eff_mod-2793.2*HPT_flow_mod+1232.1*LPT_eff_mod+823.133*LPT_flow_mod+Normal(45.7643,11.3658)</definition>
+		</equation>
+		<equation id="xdot_aircraft">
+			<parents>alt Mach TRA SmFan SmLPC SmHPC T24 P2</parents>
+			<definition>xdot_aircraft=4.97971e-08*alt+0.00273858*Mach+3.21485e-07*TRA-1.33977e-07*SmFan-1.15832e-07*SmLPC+1.08871e-08*SmHPC-5.99131e-07*T24+3.85291e-06*P2+Normal(-0.000171984,1.29855e-06)</definition>
+		</equation>
+		<equation id="rho2">
+			<parents>T2 W21 P2 Ps30 xdot_aircraft FANPR LPCPR LPTPR</parents>
+			<definition>rho2=2.08802e-06*T2+4.59675e-08*W21+8.43787e-06*P2-1.13612e-08*Ps30-0.0321472*xdot_aircraft+2.14083e-05*FANPR-2.44198e-06*LPCPR+3.75372e-05*LPTPR+Normal(-0.0002756,3.58958e-07)</definition>
+		</equation>
+		<equation id="a">
+			<parents>alt Mach T2 W21 SmLPC P2 P50 rho2</parents>
+			<definition>a=-1.13548e-05*alt-0.669344*Mach+0.667119*T2-0.000191586*W21-0.00473534*SmLPC-0.0573609*P2+0.00543244*P50+825.771*rho2+Normal(152.496,0.0072011)</definition>
+		</equation>
+		<equation id="HPTPR">
+			<parents>T40 P45 T48 Ps30 P40 HPC_flow_mod HPT_flow_mod</parents>
+			<definition>HPTPR=8.60691e-06*T40+0.000440742*P45+9.07899e-06*T48-0.000197711*Ps30+0.00011086*P40-0.00650475*HPC_flow_mod-0.0267558*HPT_flow_mod+Normal(0.167589,0.000153072)</definition>
+		</equation>
+		<equation id="rho24">
+			<parents>P30 P45 W22 T24 P24 P40 P50 Wf LPCPR rho2</parents>
+			<definition>rho24=-1.94277e-07*P30-2.10877e-07*P45+4.63462e-06*W22+9.99033e-07*T24-8.0427e-07*P24+1.65385e-07*P40-6.64612e-07*P50+6.04254e-05*Wf+0.000217032*LPCPR+0.971027*rho2+Normal(-0.00048725,1.6024e-06)</definition>
+		</equation>
+		<equation id="rho48">
+			<parents>P30 P45 W48 W50 T48 P24 Ps30 P40 Wf rho2 rho24</parents>
+			<definition>rho48=1.04459e-06*P30+3.30827e-06*P45+6.59933e-05*W48-6.06965e-05*W50-6.14419e-08*T48-4.73879e-06*P24-2.88891e-06*Ps30+1.98507e-06*P40-0.000206261*Wf+0.0170539*rho2+0.533055*rho24+Normal(6.76343e-05,1.00743e-06)</definition>
+		</equation>
+		<equation id="rho50">
+			<parents>W50 T50 P2 P24 P50 xdot_aircraft LPTPR rho2 rho48</parents>
+			<definition>rho50=-5.92017e-06*W50-7.13511e-08*T50-7.96844e-07*P2-2.26156e-06*P24+4.569e-06*P50+0.0238071*xdot_aircraft+0.000347528*LPTPR+0.123945*rho2+0.66092*rho48+Normal(-0.000126603,1.4973e-06)</definition>
+		</equation>
+		<equation id="xdot2">
+			<parents>T2 LPC_eff_mod xdot_aircraft rho2</parents>
+			<definition>xdot2=0.0141131*T2-0.143379*LPC_eff_mod+39.079*xdot_aircraft+299.94*rho2+Normal(-3.54873,0.0222569)</definition>
+		</equation>
+		<equation id="xdot24">
+			<parents>T24 P24 Nc rho24 xdot2</parents>
+			<definition>xdot24=0.00294871*T24+0.00486168*P24+0.000369343*Nc-644.557*rho24+0.415584*xdot2+Normal(-3.43427,0.0261594)</definition>
+		</equation>
+		<equation id="xdot30">
+			<parents>P30 T30 Nc FANPR rho24 rho30 rho48 xdot24</parents>
+			<definition>xdot30=-0.000125587*P30+0.00388167*T30+9.9914e-06*Nc+0.0188133*FANPR-29.1413*rho24+36.3074*rho30-30.5769*rho48+0.0239002*xdot24+Normal(-2.41652,0.00111528)</definition>
+		</equation>
+		<equation id="xdot48">
+			<parents>P45 W48 T30 HPCPR rho48 xdot2 xdot24 xdot30</parents>
+			<definition>xdot48=0.00179704*P45-0.00427381*W48-0.00531477*T30-0.0372573*HPCPR-360.326*rho48+0.402601*xdot2-1.53785*xdot24+3.70398*xdot30+Normal(3.81871,0.00762271)</definition>
+		</equation>
+		<equation id="xdot50">
+			<parents>W50 P50 LPC_flow_mod HPC_eff_mod HPTPR rho30 rho50 xdot2 xdot24 xdot30 xdot48</parents>
+			<definition>xdot50=-0.00692076*W50-0.0112868*P50-1.19483*LPC_flow_mod-2.38355*HPC_eff_mod-2.88145*HPTPR+125.794*rho30+2717.65*rho50-0.332265*xdot2+0.493189*xdot24-1.14224*xdot30+1.46578*xdot48+Normal(0.0483498,0.00953742)</definition>
+		</equation>
+		<equation id="Nf_prev">
+			<parents>P50 Nf FANPR LPCPR HPCPR xdot48</parents>
+			<definition>Nf_prev=-0.180715*P50+1.13063*Nf+283.937*FANPR-433.851*LPCPR-17.7574*HPCPR-2.74713*xdot48+Normal(197.15,13.7015)</definition>
+		</equation>
+		<equation id="Nc_prev">
+			<parents>SmHPC T48 Nc HPCPR xdot24 Nf_prev</parents>
+			<definition>Nc_prev=-12.9785*SmHPC-0.924502*T48+1.11824*Nc-47.1484*HPCPR+5.51221*xdot24+0.415677*Nf_prev+Normal(167.362,13.8791)</definition>
+		</equation>
+		<equation id="alt_diff">
+			<parents>SmFan SmLPC SmHPC T50 FANPR HPCPR LPTPR Nf_prev</parents>
+			<definition>alt_diff=1.64266*SmFan-0.561461*SmLPC+2.48552*SmHPC+0.112435*T50+106.262*FANPR+17.1569*HPCPR+522.4*LPTPR+0.0358793*Nf_prev+Normal(-767.607,5.93801)</definition>
+		</equation>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.0.10@8fc4651c837e" name="Unnamed">
+			<node id="alt">
+				<name>alt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Mach">
+				<name>Mach</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="TRA">
+				<name>TRA</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T2">
+				<name>T2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T40">
+				<name>T40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P30">
+				<name>P30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P45">
+				<name>P45</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W21">
+				<name>W21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W22">
+				<name>W22</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W25">
+				<name>W25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W31">
+				<name>W31</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W32">
+				<name>W32</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W48">
+				<name>W48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W50">
+				<name>W50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmFan">
+				<name>SmFan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmLPC">
+				<name>SmLPC</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmHPC">
+				<name>SmHPC</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="phi">
+				<name>phi</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T24">
+				<name>T24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T30">
+				<name>T30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T48">
+				<name>T48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T50">
+				<name>T50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P15">
+				<name>P15</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P2">
+				<name>P2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P21">
+				<name>P21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P24">
+				<name>P24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Ps30">
+				<name>Ps30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P40">
+				<name>P40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P50">
+				<name>P50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nf">
+				<name>Nf</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nc">
+				<name>Nc</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Wf">
+				<name>Wf</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="fan_eff_mod">
+				<name>fan_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="fan_flow_mod">
+				<name>fan_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPC_eff_mod">
+				<name>LPC_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPC_flow_mod">
+				<name>LPC_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPC_eff_mod">
+				<name>HPC_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPC_flow_mod">
+				<name>HPC_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPT_eff_mod">
+				<name>HPT_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPT_flow_mod">
+				<name>HPT_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPT_eff_mod">
+				<name>LPT_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPT_flow_mod">
+				<name>LPT_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="RUL">
+				<name>RUL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="a">
+				<name>a</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot_aircraft">
+				<name>xdot_aircraft</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="FANPR">
+				<name>FANPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPCPR">
+				<name>LPCPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPCPR">
+				<name>HPCPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPTPR">
+				<name>HPTPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPTPR">
+				<name>LPTPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho2">
+				<name>rho2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho24">
+				<name>rho24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho30">
+				<name>rho30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho48">
+				<name>rho48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho50">
+				<name>rho50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot2">
+				<name>xdot2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot24">
+				<name>xdot24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot30">
+				<name>xdot30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot48">
+				<name>xdot48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot50">
+				<name>xdot50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nf_prev">
+				<name>Nf_prev</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nc_prev">
+				<name>Nc_prev</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="alt_diff">
+				<name>alt_diff</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

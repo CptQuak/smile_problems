@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<equation id="alt">
+			<definition lower="915.3917236328125" upper="10676.8359375">alt=Normal(5014.01,2483.02)</definition>
+			<discretization>
+				<interval label="State___915_39172___1635_7179" upper="1635.717895507813" />
+				<interval label="State___1635_7179___2517_28149" upper="2517.281494140625" />
+				<interval label="State___2517_28149___3277_5376" upper="3277.53759765625" />
+				<interval label="State___3277_5376___3885_37036" upper="3885.370361328125" />
+				<interval label="State___3885_37036___4846_32715" upper="4846.3271484375" />
+				<interval label="State___4846_32715___5986_46777" upper="5986.4677734375" />
+				<interval label="State___5986_46777___6705_97412" upper="6705.97412109375" />
+				<interval label="State___6705_97412___7567_1748" upper="7567.1748046875" />
+				<interval label="State___7567_1748___8533_49609" upper="8533.49609375" />
+				<interval label="State___8533_49609___10676_83594" upper="10676.8359375" />
+			</discretization>
+		</equation>
+		<equation id="Mach">
+			<definition lower="0.1898379027843475" upper="0.7467452883720398">Mach=Normal(0.547682,0.120007)</definition>
+			<discretization>
+				<interval label="State___0_18984___0_37859" upper="0.3785903036594392" />
+				<interval label="State___0_37859___0_43539" upper="0.4353867173194885" />
+				<interval label="State___0_43539___0_47888" upper="0.4788755774497986" />
+				<interval label="State___0_47888___0_52674" upper="0.5267366766929626" />
+				<interval label="State___0_52674___0_56023" upper="0.5602337718009949" />
+				<interval label="State___0_56023___0_59579" upper="0.5957909822463989" />
+				<interval label="State___0_59579___0_63354" upper="0.6335405707359314" />
+				<interval label="State___0_63354___0_66091" upper="0.6609078049659729" />
+				<interval label="State___0_66091___0_70142" upper="0.7014230489730835" />
+				<interval label="State___0_70142___0_74675" upper="0.7467452883720398" />
+			</discretization>
+		</equation>
+		<equation id="TRA">
+			<definition lower="23.69514274597168" upper="88.76889801025391">TRA=Normal(61.5584,18.1994)</definition>
+			<discretization>
+				<interval label="State___23_69514___30_88455" upper="30.88454627990723" />
+				<interval label="State___30_88455___44_44597" upper="44.44597244262695" />
+				<interval label="State___44_44597___51_16077" upper="51.16077041625977" />
+				<interval label="State___51_16077___58_95661" upper="58.95661163330078" />
+				<interval label="State___58_95661___67_14796" upper="67.14795684814453" />
+				<interval label="State___67_14796___73_24753" upper="73.24752807617188" />
+				<interval label="State___73_24753___76_37641" upper="76.37641143798828" />
+				<interval label="State___76_37641___78_90764" upper="78.90763854980469" />
+				<interval label="State___78_90764___80_77091" upper="80.77091217041016" />
+				<interval label="State___80_77091___88_7689" upper="88.76889801025391" />
+			</discretization>
+		</equation>
+		<equation id="T2">
+			<parents>alt TRA</parents>
+			<definition lower="234.5536651611328" upper="291.6900024414062">T2=-0.00452098*alt+0.0234527*TRA+Normal(292.458,1.85669)</definition>
+			<discretization>
+				<interval label="State___234_55367___255_21667" upper="255.2166748046875" />
+				<interval label="State___255_21667___260_41034" upper="260.4103393554688" />
+				<interval label="State___260_41034___263_80444" upper="263.804443359375" />
+				<interval label="State___263_80444___267_32269" upper="267.3226928710938" />
+				<interval label="State___267_32269___272_73712" upper="272.7371215820312" />
+				<interval label="State___272_73712___276_65036" upper="276.6503601074219" />
+				<interval label="State___276_65036___279_73801" upper="279.7380065917969" />
+				<interval label="State___279_73801___281_96524" upper="281.9652404785156" />
+				<interval label="State___281_96524___285_05072" upper="285.0507232666016" />
+				<interval label="State___285_05072___291_69" upper="291.6900024414062" />
+			</discretization>
+		</equation>
+		<equation id="T40">
+			<definition lower="1074.505615234375" upper="1689.880615234375">T40=Normal(1412.48,97.3668)</definition>
+			<discretization>
+				<interval label="State___1074_50562___1269_32885" upper="1269.328845214844" />
+				<interval label="State___1269_32885___1324_59971" upper="1324.59970703125" />
+				<interval label="State___1324_59971___1372_51782" upper="1372.517822265625" />
+				<interval label="State___1372_51782___1403_85659" upper="1403.856591796875" />
+				<interval label="State___1403_85659___1419_91858" upper="1419.918579101562" />
+				<interval label="State___1419_91858___1433_00359" upper="1433.003588867188" />
+				<interval label="State___1433_00359___1452_13782" upper="1452.137817382812" />
+				<interval label="State___1452_13782___1495_78362" upper="1495.783618164063" />
+				<interval label="State___1495_78362___1547_96758" upper="1547.967578125" />
+				<interval label="State___1547_96758___1689_88062" upper="1689.880615234375" />
+			</discretization>
+		</equation>
+		<equation id="P30">
+			<definition lower="594.5634765625" upper="3321.280029296875">P30=Normal(1713.27,424.599)</definition>
+			<discretization>
+				<interval label="State___594_56348___1261_01598" upper="1261.015979003906" />
+				<interval label="State___1261_01598___1352_97849" upper="1352.978491210938" />
+				<interval label="State___1352_97849___1440_26425" upper="1440.264245605469" />
+				<interval label="State___1440_26425___1517_42688" upper="1517.426879882812" />
+				<interval label="State___1517_42688___1614_64966" upper="1614.649658203125" />
+				<interval label="State___1614_64966___1739_20481" upper="1739.204809570313" />
+				<interval label="State___1739_20481___1881_47864" upper="1881.478637695312" />
+				<interval label="State___1881_47864___2043_86809" upper="2043.868090820313" />
+				<interval label="State___2043_86809___2326_28623" upper="2326.28623046875" />
+				<interval label="State___2326_28623___3321_28003" upper="3321.280029296875" />
+			</discretization>
+		</equation>
+		<equation id="P45">
+			<parents>P30</parents>
+			<definition lower="103.1398544311523" upper="593.9244995117188">P45=0.179309*P30+Normal(-4.12887,2.13048)</definition>
+			<discretization>
+				<interval label="State___103_13985___222_68689" upper="222.6868865966797" />
+				<interval label="State___222_68689___239_21284" upper="239.2128448486328" />
+				<interval label="State___239_21284___253_93884" upper="253.9388412475586" />
+				<interval label="State___253_93884___267_89753" upper="267.8975280761719" />
+				<interval label="State___267_89753___284_55614" upper="284.5561370849609" />
+				<interval label="State___284_55614___307_22431" upper="307.2243103027344" />
+				<interval label="State___307_22431___332_82012" upper="332.8201202392578" />
+				<interval label="State___332_82012___361_58234" upper="361.5823364257812" />
+				<interval label="State___361_58234___413_87669" upper="413.8766906738281" />
+				<interval label="State___413_87669___593_9245" upper="593.9244995117188" />
+			</discretization>
+		</equation>
+		<equation id="W21">
+			<parents>TRA</parents>
+			<definition lower="443.4572143554688" upper="1386.336547851562">W21=-1.0508*TRA+Normal(937.418,164.319)</definition>
+			<discretization>
+				<interval label="State___443_45721___657_95306" upper="657.9530578613281" />
+				<interval label="State___657_95306___717_48755" upper="717.487548828125" />
+				<interval label="State___717_48755___765_94749" upper="765.9474914550781" />
+				<interval label="State___765_94749___810_93888" upper="810.9388793945312" />
+				<interval label="State___810_93888___867_3439" upper="867.3439025878906" />
+				<interval label="State___867_3439___912_29158" upper="912.2915771484375" />
+				<interval label="State___912_29158___960_21219" upper="960.2121887207031" />
+				<interval label="State___960_21219___1018_00114" upper="1018.001135253906" />
+				<interval label="State___1018_00114___1087_98513" upper="1087.985131835937" />
+				<interval label="State___1087_98513___1386_33655" upper="1386.336547851562" />
+			</discretization>
+		</equation>
+		<equation id="W22">
+			<parents>P30 W21</parents>
+			<definition lower="31.80514526367188" upper="135.4600524902344">W22=0.0280207*P30+0.0284109*W21+Normal(3.98858,0.746257)</definition>
+			<discretization>
+				<interval label="State___31_80515___58_38596" upper="58.38595733642578" />
+				<interval label="State___58_38596___62_2148" upper="62.2147964477539" />
+				<interval label="State___62_2148___66_29954" upper="66.29953842163086" />
+				<interval label="State___66_29954___69_51552" upper="69.51552429199219" />
+				<interval label="State___69_51552___73_85503" upper="73.85502624511719" />
+				<interval label="State___73_85503___78_62236" upper="78.62235717773437" />
+				<interval label="State___78_62236___83_86046" upper="83.8604606628418" />
+				<interval label="State___83_86046___90_09684" upper="90.09684143066407" />
+				<interval label="State___90_09684___99_86011" upper="99.86011352539062" />
+				<interval label="State___99_86011___135_46005" upper="135.4600524902344" />
+			</discretization>
+		</equation>
+		<equation id="W32">
+			<definition lower="2.120536088943481" upper="9.466919898986816">W32=Normal(5.30887,1.16109)</definition>
+			<discretization>
+				<interval label="State___2_12054___4_00441" upper="4.004413604736328" />
+				<interval label="State___4_00441___4_27579" upper="4.275791358947754" />
+				<interval label="State___4_27579___4_56531" upper="4.565305519104004" />
+				<interval label="State___4_56531___4_79325" upper="4.793249320983887" />
+				<interval label="State___4_79325___5_10079" upper="5.100790023803711" />
+				<interval label="State___5_10079___5_4387" upper="5.438703632354736" />
+				<interval label="State___5_4387___5_80992" upper="5.809921884536744" />
+				<interval label="State___5_80992___6_25192" upper="6.25192346572876" />
+				<interval label="State___6_25192___6_94388" upper="6.943875408172607" />
+				<interval label="State___6_94388___9_46692" upper="9.466919898986816" />
+			</discretization>
+		</equation>
+		<equation id="W48">
+			<parents>W22</parents>
+			<definition lower="28.58130264282227" upper="128.7782287597656">W48=0.965246*W22+Normal(-2.2027,0.101678)</definition>
+			<discretization>
+				<interval label="State___28_5813___54_21354" upper="54.21353836059571" />
+				<interval label="State___54_21354___57_88674" upper="57.88674163818359" />
+				<interval label="State___57_88674___61_79336" upper="61.79335670471191" />
+				<interval label="State___61_79336___64_88046" upper="64.88045501708984" />
+				<interval label="State___64_88046___69_03661" upper="69.03661346435547" />
+				<interval label="State___69_03661___73_63138" upper="73.63137512207031" />
+				<interval label="State___73_63138___78_69518" upper="78.69518127441405" />
+				<interval label="State___78_69518___84_73089" upper="84.73089141845703" />
+				<interval label="State___84_73089___94_21856" upper="94.2185577392578" />
+				<interval label="State___94_21856___128_77823" upper="128.7782287597656" />
+			</discretization>
+		</equation>
+		<equation id="SmFan">
+			<parents>Mach</parents>
+			<definition lower="10.82918739318848" upper="28.78391647338867">SmFan=10.577*Mach+Normal(13.0599,1.54998)</definition>
+			<discretization>
+				<interval label="State___10_82919___16_37" upper="16.36999950408936" />
+				<interval label="State___16_37___17_54141" upper="17.5414134979248" />
+				<interval label="State___17_54141___18_10979" upper="18.10979099273682" />
+				<interval label="State___18_10979___18_42909" upper="18.42908515930176" />
+				<interval label="State___18_42909___18_81453" upper="18.81453323364258" />
+				<interval label="State___18_81453___19_36155" upper="19.36155014038086" />
+				<interval label="State___19_36155___19_78117" upper="19.78117160797119" />
+				<interval label="State___19_78117___20_25017" upper="20.25017356872559" />
+				<interval label="State___20_25017___21_38072" upper="21.38071823120117" />
+				<interval label="State___21_38072___28_78392" upper="28.78391647338867" />
+			</discretization>
+		</equation>
+		<equation id="fan_eff_mod" target="true">
+			<definition lower="-0.02794593572616577" upper="1.243731003341964e-05">fan_eff_mod=Normal(-0.00240052,0.00306193)</definition>
+			<discretization>
+				<interval label="State___neg0_02795___neg0_00316" upper="-0.003162454115226865" />
+				<interval label="State___neg0_00316___neg0_00168" upper="-0.00168451969511807" />
+				<interval label="State___neg0_00168___neg0_00107" upper="-0.00107386417221278" />
+				<interval label="State___neg0_00107___neg0_00078" upper="-0.0007778832805342972" />
+				<interval label="State___neg0_00078___1eneg05" upper="1.243731003341964e-05" />
+			</discretization>
+		</equation>
+		<equation id="fan_flow_mod" target="true">
+			<parents>W21 SmFan fan_eff_mod</parents>
+			<definition lower="-0.05310735106468201" upper="-3.21496554533951e-06">fan_flow_mod=-1.89991e-06*W21-0.00028347*SmFan+1.11981*fan_eff_mod+Normal(0.00635989,0.00339559)</definition>
+			<discretization>
+				<interval label="State___neg0_05311___neg0_00424" upper="-0.004239561967551708" />
+				<interval label="State___neg0_00424___neg0_00209" upper="-0.002088484819978476" />
+				<interval label="State___neg0_00209___neg0_00119" upper="-0.001187150017358363" />
+				<interval label="State___neg0_00119___neg0_00089" upper="-0.0008854733896441758" />
+				<interval label="State___neg0_00089___neg0_0" upper="-3.21496554533951e-06" />
+			</discretization>
+		</equation>
+		<equation id="T24">
+			<definition lower="269.0221252441406" upper="351.896240234375">T24=Normal(315.637,11.6088)</definition>
+			<discretization>
+				<interval label="State___269_02213___301_84462" upper="301.8446228027344" />
+				<interval label="State___301_84462___305_76841" upper="305.7684143066406" />
+				<interval label="State___305_76841___308_68896" upper="308.68896484375" />
+				<interval label="State___308_68896___311_1928" upper="311.1927978515625" />
+				<interval label="State___311_1928___314_08847" upper="314.0884704589844" />
+				<interval label="State___314_08847___317_51844" upper="317.5184448242188" />
+				<interval label="State___317_51844___321_02458" upper="321.0245758056641" />
+				<interval label="State___321_02458___325_26426" upper="325.2642578125" />
+				<interval label="State___325_26426___332_44726" upper="332.4472564697265" />
+				<interval label="State___332_44726___351_89624" upper="351.896240234375" />
+			</discretization>
+		</equation>
+		<equation id="SmLPC">
+			<parents>SmFan</parents>
+			<definition lower="4.218523979187012" upper="14.59094429016113">SmLPC=-0.306303*SmFan+Normal(14.0544,0.798258)</definition>
+			<discretization>
+				<interval label="State___4_21852___6_83489" upper="6.83489465713501" />
+				<interval label="State___6_83489___7_38226" upper="7.382259368896484" />
+				<interval label="State___7_38226___7_85013" upper="7.850125026702881" />
+				<interval label="State___7_85013___8_13203" upper="8.132029342651368" />
+				<interval label="State___8_13203___8_33408" upper="8.334077835083008" />
+				<interval label="State___8_33408___8_57784" upper="8.577840805053711" />
+				<interval label="State___8_57784___8_88607" upper="8.886073970794678" />
+				<interval label="State___8_88607___9_15314" upper="9.153138732910156" />
+				<interval label="State___9_15314___9_53509" upper="9.535090065002441" />
+				<interval label="State___9_53509___14_59094" upper="14.59094429016113" />
+			</discretization>
+		</equation>
+		<equation id="SmHPC">
+			<parents>T40 P30</parents>
+			<definition lower="21.97637939453125" upper="38.7078742980957">SmHPC=-0.0305311*T40+0.00206352*P30+Normal(67.8908,0.306101)</definition>
+			<discretization>
+				<interval label="State___21_97638___25_41113" upper="25.41112766265869" />
+				<interval label="State___25_41113___25_99332" upper="25.99332122802734" />
+				<interval label="State___25_99332___26_66794" upper="26.6679370880127" />
+				<interval label="State___26_66794___27_41739" upper="27.41738891601562" />
+				<interval label="State___27_41739___27_99222" upper="27.99222278594971" />
+				<interval label="State___27_99222___28_45992" upper="28.45992469787598" />
+				<interval label="State___28_45992___29_2983" upper="29.29829521179199" />
+				<interval label="State___29_2983___30_60162" upper="30.60161972045898" />
+				<interval label="State___30_60162___32_07379" upper="32.07378540039063" />
+				<interval label="State___32_07379___38_70787" upper="38.7078742980957" />
+			</discretization>
+		</equation>
+		<equation id="P24">
+			<parents>P30 W21 SmLPC SmHPC</parents>
+			<definition lower="47.68317413330078" upper="181.5873565673828">P24=0.0152178*P30+0.107666*W21+2.31247*SmLPC+2.12527*SmHPC+Normal(-91.5821,2.17401)</definition>
+			<discretization>
+				<interval label="State___47_68317___77_7628" upper="77.76280059814454" />
+				<interval label="State___77_7628___84_91635" upper="84.91634826660156" />
+				<interval label="State___84_91635___91_42595" upper="91.42594680786132" />
+				<interval label="State___91_42595___98_01091" upper="98.0109130859375" />
+				<interval label="State___98_01091___107_13863" upper="107.1386299133301" />
+				<interval label="State___107_13863___113_88739" upper="113.8873916625977" />
+				<interval label="State___113_88739___121_49152" upper="121.4915191650391" />
+				<interval label="State___121_49152___128_60197" upper="128.6019683837891" />
+				<interval label="State___128_60197___138_5452" upper="138.5452011108399" />
+				<interval label="State___138_5452___181_58736" upper="181.5873565673828" />
+			</discretization>
+		</equation>
+		<equation id="LPC_eff_mod" target="true">
+			<parents>T24 P24 fan_flow_mod</parents>
+			<definition lower="-0.06134328991174698" upper="0.000111688525066711">LPC_eff_mod=4.92554e-06*T24-1.17385e-05*P24+0.923418*fan_flow_mod+Normal(-0.00019666,0.00285909)</definition>
+			<discretization>
+				<interval label="State___neg0_06134___neg0_0034" upper="-0.003401626599952579" />
+				<interval label="State___neg0_0034___neg0_00179" upper="-0.001788572641089559" />
+				<interval label="State___neg0_00179___neg0_00113" upper="-0.001132576027885079" />
+				<interval label="State___neg0_00113___neg0_00064" upper="-0.0006369628827087581" />
+				<interval label="State___neg0_00064___0_00011" upper="0.000111688525066711" />
+			</discretization>
+		</equation>
+		<equation id="T30">
+			<parents>T40 T24</parents>
+			<definition lower="596.6807861328125" upper="852.6350708007812">T30=0.271243*T40+1.14205*T24+Normal(-3.96448,1.10643)</definition>
+			<discretization>
+				<interval label="State___596_68079___691_78136" upper="691.7813598632813" />
+				<interval label="State___691_78136___707_9574" upper="707.9573974609375" />
+				<interval label="State___707_9574___721_26348" upper="721.2634765625" />
+				<interval label="State___721_26348___730_30554" upper="730.3055419921875" />
+				<interval label="State___730_30554___737_06323" upper="737.063232421875" />
+				<interval label="State___737_06323___745_61671" upper="745.6167114257812" />
+				<interval label="State___745_61671___755_82283" upper="755.8228332519532" />
+				<interval label="State___755_82283___768_35016" upper="768.3501586914062" />
+				<interval label="State___768_35016___795_18739" upper="795.1873901367187" />
+				<interval label="State___795_18739___852_63507" upper="852.6350708007812" />
+			</discretization>
+		</equation>
+		<equation id="W50">
+			<parents>W22 W48</parents>
+			<definition lower="30.33078575134277" upper="136.2286529541016">W50=0.0552699*W22+0.999719*W48+Normal(-0.000489113,0.00088171)</definition>
+			<discretization>
+				<interval label="State___30_33079___57_42508" upper="57.42508163452148" />
+				<interval label="State___57_42508___61_30824" upper="61.3082389831543" />
+				<interval label="State___61_30824___65_4396" upper="65.43959579467773" />
+				<interval label="State___65_4396___68_70429" upper="68.70428771972657" />
+				<interval label="State___68_70429___73_09848" upper="73.09848403930664" />
+				<interval label="State___73_09848___77_95651" upper="77.95650634765624" />
+				<interval label="State___77_95651___83_30759" upper="83.30758895874023" />
+				<interval label="State___83_30759___89_68594" upper="89.68594055175782" />
+				<interval label="State___89_68594___99_71039" upper="99.71039428710938" />
+				<interval label="State___99_71039___136_22865" upper="136.2286529541016" />
+			</discretization>
+		</equation>
+		<equation id="phi">
+			<parents>T2 T40 SmFan</parents>
+			<definition lower="197.8554382324219" upper="312.3929138183594">phi=-0.300856*T2+0.193624*T40-0.102149*SmFan+Normal(73.2466,0.651776)</definition>
+			<discretization>
+				<interval label="State___197_85544___232_71063" upper="232.7106262207031" />
+				<interval label="State___232_71063___245_61364" upper="245.6136413574219" />
+				<interval label="State___245_61364___255_73476" upper="255.7347625732422" />
+				<interval label="State___255_73476___262_73352" upper="262.7335205078125" />
+				<interval label="State___262_73352___265_84702" upper="265.8470153808594" />
+				<interval label="State___265_84702___268_83058" upper="268.8305847167969" />
+				<interval label="State___268_83058___273_46843" upper="273.4684326171875" />
+				<interval label="State___273_46843___280_5286" upper="280.5286010742187" />
+				<interval label="State___280_5286___287_46867" upper="287.4686706542969" />
+				<interval label="State___287_46867___312_39291" upper="312.3929138183594" />
+			</discretization>
+		</equation>
+		<equation id="T48">
+			<parents>T40 T30</parents>
+			<definition lower="682.5938720703125" upper="1106.413330078125">T48=0.67156*T40+0.0515734*T30+Normal(-74.5644,0.931522)</definition>
+			<discretization>
+				<interval label="State___682_59387___814_01696" upper="814.0169616699219" />
+				<interval label="State___814_01696___851_40935" upper="851.4093505859375" />
+				<interval label="State___851_40935___883_98817" upper="883.9881713867187" />
+				<interval label="State___883_98817___905_46998" upper="905.4699829101562" />
+				<interval label="State___905_46998___916_70764" upper="916.7076416015625" />
+				<interval label="State___916_70764___925_9266" upper="925.9265991210938" />
+				<interval label="State___925_9266___939_49056" upper="939.4905578613282" />
+				<interval label="State___939_49056___969_5851" upper="969.5850952148437" />
+				<interval label="State___969_5851___1006_27386" upper="1006.273864746094" />
+				<interval label="State___1006_27386___1106_41333" upper="1106.413330078125" />
+			</discretization>
+		</equation>
+		<equation id="T50">
+			<parents>T40 T30 T48</parents>
+			<definition lower="495.0073852539062" upper="756.1505737304688">T50=-3.70956*T40+1.67262*T30+4.90166*T48+Normal(158.417,5.87246)</definition>
+			<discretization>
+				<interval label="State___495_00739___588_79095" upper="588.7909484863281" />
+				<interval label="State___588_79095___598_84452" upper="598.8445190429687" />
+				<interval label="State___598_84452___606_40359" upper="606.4035888671875" />
+				<interval label="State___606_40359___612_79602" upper="612.7960205078125" />
+				<interval label="State___612_79602___620_64478" upper="620.644775390625" />
+				<interval label="State___620_64478___630_74124" upper="630.7412353515625" />
+				<interval label="State___630_74124___641_80149" upper="641.8014892578125" />
+				<interval label="State___641_80149___654_02034" upper="654.0203369140625" />
+				<interval label="State___654_02034___677_92597" upper="677.9259704589844" />
+				<interval label="State___677_92597___756_15057" upper="756.1505737304688" />
+			</discretization>
+		</equation>
+		<equation id="Ps30">
+			<parents>P30 P45 W48 W50 phi T50</parents>
+			<definition lower="555.7927856445312" upper="3125.169677734375">Ps30=1.04602*P30-0.178809*P45-66.9629*W48+61.4081*W50-0.016904*phi+0.0577526*T50+Normal(-21.3276,0.27526)</definition>
+			<discretization>
+				<interval label="State___555_79279___1183_51123" upper="1183.51123046875" />
+				<interval label="State___1183_51123___1269_84565" upper="1269.845654296875" />
+				<interval label="State___1269_84565___1350_83593" upper="1350.835925292969" />
+				<interval label="State___1350_83593___1423_62642" upper="1423.626416015625" />
+				<interval label="State___1423_62642___1513_97943" upper="1513.979431152344" />
+				<interval label="State___1513_97943___1631_90811" upper="1631.90810546875" />
+				<interval label="State___1631_90811___1766_20153" upper="1766.201525878906" />
+				<interval label="State___1766_20153___1918_853" upper="1918.853002929688" />
+				<interval label="State___1918_853___2186_73884" upper="2186.738842773437" />
+				<interval label="State___2186_73884___3125_16968" upper="3125.169677734375" />
+			</discretization>
+		</equation>
+		<equation id="LPC_flow_mod" target="true">
+			<parents>W22 fan_eff_mod fan_flow_mod LPC_eff_mod</parents>
+			<definition lower="-0.04618674889206886" upper="0.0001279830903513357">LPC_flow_mod=-8.93088e-07*W22+0.564257*fan_eff_mod+0.0607844*fan_flow_mod+0.437835*LPC_eff_mod+Normal(-2.07415e-05,0.00159336)</definition>
+			<discretization>
+				<interval label="State___neg0_04619___neg0_00407" upper="-0.004074636846780777" />
+				<interval label="State___neg0_00407___neg0_00197" upper="-0.001971831545233727" />
+				<interval label="State___neg0_00197___neg0_00106" upper="-0.001060446724295616" />
+				<interval label="State___neg0_00106___neg0_00063" upper="-0.0006281468668021262" />
+				<interval label="State___neg0_00063___0_00013" upper="0.0001279830903513357" />
+			</discretization>
+		</equation>
+		<equation id="HPC_eff_mod" target="true">
+			<parents>P30 T30 Ps30 fan_eff_mod LPC_eff_mod LPC_flow_mod</parents>
+			<definition lower="-0.02553976140916348" upper="0.0001602184784132987">HPC_eff_mod=0.000226345*P30+3.02334e-05*T30-0.000242735*Ps30-0.0872798*fan_eff_mod-0.209593*LPC_eff_mod+0.612877*LPC_flow_mod+Normal(-0.0209132,0.00179188)</definition>
+			<discretization>
+				<interval label="State___neg0_02554___neg0_00298" upper="-0.002975017996504903" />
+				<interval label="State___neg0_00298___neg0_00155" upper="-0.001547449617646635" />
+				<interval label="State___neg0_00155___neg0_00101" upper="-0.001011834712699056" />
+				<interval label="State___neg0_00101___neg0_00065" upper="-0.0006532749393954873" />
+				<interval label="State___neg0_00065___0_00016" upper="0.0001602184784132987" />
+			</discretization>
+		</equation>
+		<equation id="HPC_flow_mod" target="true">
+			<parents>fan_flow_mod LPC_eff_mod HPC_eff_mod</parents>
+			<definition lower="-0.03133208304643631" upper="-1.894416709546931e-05">HPC_flow_mod=0.474966*fan_flow_mod-0.0656203*LPC_eff_mod+0.444835*HPC_eff_mod+Normal(-0.000243288,0.00107764)</definition>
+			<discretization>
+				<interval label="State___neg0_03133___neg0_00401" upper="-0.004006782080978155" />
+				<interval label="State___neg0_00401___neg0_00188" upper="-0.001875221030786633" />
+				<interval label="State___neg0_00188___neg0_00118" upper="-0.001176251797005534" />
+				<interval label="State___neg0_00118___neg0_00078" upper="-0.0007833197014406323" />
+				<interval label="State___neg0_00078___neg2eneg05" upper="-1.894416709546931e-05" />
+			</discretization>
+		</equation>
+		<equation id="P50">
+			<parents>alt T24</parents>
+			<definition lower="28.56265640258789" upper="115.5673065185547">P50=-0.00636941*alt+0.359869*T24+Normal(-13.9184,2.39632)</definition>
+			<discretization>
+				<interval label="State___28_56266___43_11632" upper="43.11632041931152" />
+				<interval label="State___43_11632___48_85468" upper="48.85468139648437" />
+				<interval label="State___48_85468___53_17451" upper="53.17450981140136" />
+				<interval label="State___53_17451___58_62484" upper="58.62483749389649" />
+				<interval label="State___58_62484___66_74352" upper="66.7435188293457" />
+				<interval label="State___66_74352___74_11156" upper="74.11156311035157" />
+				<interval label="State___74_11156___79_7746" upper="79.77460479736328" />
+				<interval label="State___79_7746___86_10982" upper="86.10982360839844" />
+				<interval label="State___86_10982___94_84918" upper="94.84917526245117" />
+				<interval label="State___94_84918___115_56731" upper="115.5673065185547" />
+			</discretization>
+		</equation>
+		<equation id="P15">
+			<definition lower="40.80246353149414" upper="140.874267578125">P15=Normal(87.2512,19.8665)</definition>
+			<discretization>
+				<interval label="State___40_80246___61_02049" upper="61.02048835754395" />
+				<interval label="State___61_02049___67_6804" upper="67.68040008544922" />
+				<interval label="State___67_6804___72_70724" upper="72.70723876953124" />
+				<interval label="State___72_70724___78_55163" upper="78.55162506103515" />
+				<interval label="State___78_55163___87_46887" upper="87.4688720703125" />
+				<interval label="State___87_46887___94_08177" upper="94.08177490234375" />
+				<interval label="State___94_08177___100_25329" upper="100.2532852172852" />
+				<interval label="State___100_25329___106_08509" upper="106.0850860595703" />
+				<interval label="State___106_08509___113_0697" upper="113.0696990966797" />
+				<interval label="State___113_0697___140_87427" upper="140.874267578125" />
+			</discretization>
+		</equation>
+		<equation id="P2">
+			<parents>alt P45 W22 SmFan P15</parents>
+			<definition lower="30.34363746643066" upper="101.6945724487305">P2=-0.000294621*alt-0.0669512*P45-0.137416*W22+0.0633259*SmFan+1.09584*P15+Normal(3.47805,0.0873026)</definition>
+			<discretization>
+				<interval label="State___30_34364___45_36611" upper="45.36610679626465" />
+				<interval label="State___45_36611___51_19764" upper="51.19763565063477" />
+				<interval label="State___51_19764___55_42464" upper="55.42464065551758" />
+				<interval label="State___55_42464___60_35384" upper="60.35384368896484" />
+				<interval label="State___60_35384___68_12" upper="68.1199951171875" />
+				<interval label="State___68_12___74_79631" upper="74.79631042480469" />
+				<interval label="State___74_79631___80_06758" upper="80.06758117675781" />
+				<interval label="State___80_06758___84_00041" upper="84.00041198730469" />
+				<interval label="State___84_00041___91_3849" upper="91.38489532470703" />
+				<interval label="State___91_3849___101_69457" upper="101.6945724487305" />
+			</discretization>
+		</equation>
+		<equation id="Nf">
+			<parents>TRA P45 phi P50</parents>
+			<definition lower="1483.326538085938" upper="2290.162353515625">Nf=2.18547*TRA+0.970826*P45+4.93237*phi-4.32329*P50+Normal(530.613,11.1051)</definition>
+			<discretization>
+				<interval label="State___1483_32654___1645_18457" upper="1645.1845703125" />
+				<interval label="State___1645_18457___1808_73699" upper="1808.736987304688" />
+				<interval label="State___1808_73699___1889_5473" upper="1889.547302246094" />
+				<interval label="State___1889_5473___1969_89417" upper="1969.894165039062" />
+				<interval label="State___1969_89417___2014_03046" upper="2014.030456542969" />
+				<interval label="State___2014_03046___2058_32861" upper="2058.32861328125" />
+				<interval label="State___2058_32861___2097_54207" upper="2097.542065429688" />
+				<interval label="State___2097_54207___2132_87969" upper="2132.8796875" />
+				<interval label="State___2132_87969___2159_50464" upper="2159.504638671875" />
+				<interval label="State___2159_50464___2290_16235" upper="2290.162353515625" />
+			</discretization>
+		</equation>
+		<equation id="FANPR">
+			<parents>TRA T50 P2 Nf fan_eff_mod</parents>
+			<definition lower="1.128215670585632" upper="1.440009951591492">FANPR=0.00527251*TRA+0.000335756*T50+1.62734e-05*P2-0.000143558*Nf+0.811847*fan_eff_mod+Normal(1.06019,0.00379335)</definition>
+			<discretization>
+				<interval label="State___1_12822___1_18841" upper="1.188408958911896" />
+				<interval label="State___1_18841___1_23721" upper="1.23721444606781" />
+				<interval label="State___1_23721___1_27122" upper="1.271221840381622" />
+				<interval label="State___1_27122___1_29968" upper="1.299676775932312" />
+				<interval label="State___1_29968___1_32958" upper="1.329576134681702" />
+				<interval label="State___1_32958___1_35898" upper="1.358984422683716" />
+				<interval label="State___1_35898___1_3771" upper="1.377096807956696" />
+				<interval label="State___1_3771___1_38547" upper="1.385468029975891" />
+				<interval label="State___1_38547___1_39242" upper="1.392424964904785" />
+				<interval label="State___1_39242___1_44001" upper="1.440009951591492" />
+			</discretization>
+		</equation>
+		<equation id="HPCPR">
+			<parents>SmLPC phi T24 T48 T50 P24 FANPR</parents>
+			<definition lower="11.34462070465088" upper="18.78535461425781">HPCPR=0.265098*SmLPC+0.0183776*phi-0.0315916*T24+0.0254102*T48-0.0236279*T50+0.00420309*P24-0.305784*FANPR+Normal(10.4257,0.0771969)</definition>
+			<discretization>
+				<interval label="State___11_34462___13_31679" upper="13.31679458618164" />
+				<interval label="State___13_31679___14_49997" upper="14.49997005462646" />
+				<interval label="State___14_49997___15_31478" upper="15.31478481292725" />
+				<interval label="State___15_31478___15_86841" upper="15.86841163635254" />
+				<interval label="State___15_86841___16_29202" upper="16.29202270507812" />
+				<interval label="State___16_29202___16_73346" upper="16.73346405029297" />
+				<interval label="State___16_73346___17_12155" upper="17.12154693603516" />
+				<interval label="State___17_12155___17_30571" upper="17.30571060180664" />
+				<interval label="State___17_30571___17_4482" upper="17.44819660186768" />
+				<interval label="State___17_4482___18_78535" upper="18.78535461425781" />
+			</discretization>
+		</equation>
+		<equation id="LPCPR">
+			<parents>TRA P30 T24 T30 P2 P24 Ps30 Nf FANPR</parents>
+			<definition lower="1.117108345031738" upper="1.282767295837402">LPCPR=0.00112739*TRA-0.000811259*P30-0.000226277*T24-0.000203333*T30-0.00262826*P2+0.00376973*P24+0.00073102*Ps30+0.000153873*Nf+0.0602116*FANPR+Normal(0.978051,0.000633347)</definition>
+			<discretization>
+				<interval label="State___1_11711___1_14117" upper="1.141174554824829" />
+				<interval label="State___1_14117___1_17856" upper="1.17856240272522" />
+				<interval label="State___1_17856___1_19699" upper="1.196993637084961" />
+				<interval label="State___1_19699___1_21558" upper="1.215584230422974" />
+				<interval label="State___1_21558___1_2362" upper="1.236201584339142" />
+				<interval label="State___1_2362___1_24971" upper="1.249711513519287" />
+				<interval label="State___1_24971___1_25684" upper="1.256843566894531" />
+				<interval label="State___1_25684___1_26315" upper="1.263145685195923" />
+				<interval label="State___1_26315___1_26791" upper="1.267908585071564" />
+				<interval label="State___1_26791___1_28277" upper="1.282767295837402" />
+			</discretization>
+		</equation>
+		<equation id="LPTPR">
+			<parents>P45 SmLPC T48 T50 P24 P50 Nf LPCPR</parents>
+			<definition lower="0.1731986403465271" upper="0.3510874807834625">LPTPR=-2.1986e-05*P45+0.00672176*SmLPC-0.000856606*T48+0.00122836*T50+0.00150851*P24-0.00105791*P50-0.000462957*Nf+1.36068*LPCPR+Normal(-0.6542,0.00238358)</definition>
+			<discretization>
+				<interval label="State___0_1732___0_18325" upper="0.1832481741905213" />
+				<interval label="State___0_18325___0_18731" upper="0.1873119175434113" />
+				<interval label="State___0_18731___0_19228" upper="0.1922812268137932" />
+				<interval label="State___0_19228___0_19878" upper="0.1987797647714615" />
+				<interval label="State___0_19878___0_20601" upper="0.2060110792517662" />
+				<interval label="State___0_20601___0_22099" upper="0.2209861755371094" />
+				<interval label="State___0_22099___0_23813" upper="0.2381294801831245" />
+				<interval label="State___0_23813___0_2605" upper="0.260496598482132" />
+				<interval label="State___0_2605___0_30661" upper="0.3066080391407013" />
+				<interval label="State___0_30661___0_35109" upper="0.3510874807834625" />
+			</discretization>
+		</equation>
+		<equation id="rho30">
+			<parents>P30 W48 phi T30 P24 Ps30 P50 HPCPR LPTPR</parents>
+			<definition lower="0.003473165677860379" upper="0.01360232848674059">rho30=-7.05865e-05*P30+0.00022407*W48-1.02062e-06*phi-2.28876e-07*T30+1.36122e-06*P24+7.00629e-05*Ps30+3.60094e-07*P50+1.00213e-05*HPCPR-0.000166769*LPTPR+Normal(0.000294644,1.3458e-06)</definition>
+			<discretization>
+				<interval label="State___0_00347___0_00619" upper="0.006185673968866467" />
+				<interval label="State___0_00619___0_00657" upper="0.00657088290899992" />
+				<interval label="State___0_00657___0_00698" upper="0.006980356806889176" />
+				<interval label="State___0_00698___0_0073" upper="0.007301498390734196" />
+				<interval label="State___0_0073___0_00773" upper="0.007731900317594409" />
+				<interval label="State___0_00773___0_0082" upper="0.008203157968819142" />
+				<interval label="State___0_0082___0_00872" upper="0.00871680211275816" />
+				<interval label="State___0_00872___0_00932" upper="0.00932498499751091" />
+				<interval label="State___0_00932___0_01027" upper="0.01026631537824869" />
+				<interval label="State___0_01027___0_0136" upper="0.01360232848674059" />
+			</discretization>
+		</equation>
+		<equation id="W25">
+			<parents>T40 W22 W32 W48 HPC_flow_mod rho30</parents>
+			<definition lower="31.8054256439209" upper="135.4580993652344">W25=-4.40264e-09*T40+0.000895176*W22+14.0967*W32+2.0162e-06*W48+2.10702e-05*HPC_flow_mod+0.00277448*rho30+Normal(1.88436,2.03293e-05)</definition>
+			<discretization>
+				<interval label="State___31_80543___58_38571" upper="58.3857063293457" />
+				<interval label="State___58_38571___62_21467" upper="62.21466827392578" />
+				<interval label="State___62_21467___66_29953" upper="66.29952926635742" />
+				<interval label="State___66_29953___69_51567" upper="69.51566925048829" />
+				<interval label="State___69_51567___73_85487" upper="73.85486602783203" />
+				<interval label="State___73_85487___78_6226" upper="78.62260284423829" />
+				<interval label="State___78_6226___83_86025" upper="83.86025238037109" />
+				<interval label="State___83_86025___90_0966" upper="90.0966049194336" />
+				<interval label="State___90_0966___99_8596" upper="99.85959548950196" />
+				<interval label="State___99_8596___135_4581" upper="135.4580993652344" />
+			</discretization>
+		</equation>
+		<equation id="W31">
+			<parents>W25 W32</parents>
+			<definition lower="3.534226894378662" upper="15.77820014953613">W31=0.0415344*W25+1.08008*W32+Normal(-0.0783081,0.00304294)</definition>
+			<discretization>
+				<interval label="State___3_53423___6_67402" upper="6.674022102355957" />
+				<interval label="State___6_67402___7_12632" upper="7.126318550109863" />
+				<interval label="State___7_12632___7_60884" upper="7.608842229843139" />
+				<interval label="State___7_60884___7_98875" upper="7.988748836517335" />
+				<interval label="State___7_98875___8_50132" upper="8.501317024230957" />
+				<interval label="State___8_50132___9_06451" upper="9.064505767822265" />
+				<interval label="State___9_06451___9_6832" upper="9.683202743530273" />
+				<interval label="State___9_6832___10_41987" upper="10.41987247467041" />
+				<interval label="State___10_41987___11_57313" upper="11.57312564849853" />
+				<interval label="State___11_57313___15_7782" upper="15.77820014953613" />
+			</discretization>
+		</equation>
+		<equation id="P21">
+			<parents>SmLPC P15 FANPR LPCPR</parents>
+			<definition lower="41.42382049560547" upper="143.0195617675781">P21=1.76951e-08*SmLPC+1.01523*P15-1.68383e-06*FANPR+2.54624e-06*LPCPR+Normal(-1.07475e-06,4.77583e-06)</definition>
+			<discretization>
+				<interval label="State___41_42382___61_94974" upper="61.94973678588867" />
+				<interval label="State___61_94974___68_71106" upper="68.71106414794922" />
+				<interval label="State___68_71106___73_81445" upper="73.8144546508789" />
+				<interval label="State___73_81445___79_74785" upper="79.74784545898437" />
+				<interval label="State___79_74785___88_80088" upper="88.80088043212891" />
+				<interval label="State___88_80088___95_51449" upper="95.51449127197266" />
+				<interval label="State___95_51449___101_77999" upper="101.7799880981445" />
+				<interval label="State___101_77999___107_70059" upper="107.7005874633789" />
+				<interval label="State___107_70059___114_79157" upper="114.791569519043" />
+				<interval label="State___114_79157___143_01956" upper="143.0195617675781" />
+			</discretization>
+		</equation>
+		<equation id="P40">
+			<parents>T40 P30 P45 W22 W48 P24 Ps30</parents>
+			<definition lower="567.80810546875" upper="3171.822509765625">P40=-9.64501e-08*T40+0.954996*P30+2.80191e-06*P45+0.000144243*W22-0.000148177*W48-8.1677e-07*P24+4.14252e-06*Ps30+Normal(-0.000196218,0.000116874)</definition>
+			<discretization>
+				<interval label="State___567_80811___1204_27014" upper="1204.270141601562" />
+				<interval label="State___1204_27014___1292_09446" upper="1292.094458007813" />
+				<interval label="State___1292_09446___1375_45236" upper="1375.452355957031" />
+				<interval label="State___1375_45236___1449_14263" upper="1449.142626953125" />
+				<interval label="State___1449_14263___1541_99042" upper="1541.990417480469" />
+				<interval label="State___1541_99042___1660_94043" upper="1660.9404296875" />
+				<interval label="State___1660_94043___1796_8121" upper="1796.812097167969" />
+				<interval label="State___1796_8121___1951_89424" upper="1951.89423828125" />
+				<interval label="State___1951_89424___2221_60315" upper="2221.603149414062" />
+				<interval label="State___2221_60315___3171_82251" upper="3171.822509765625" />
+			</discretization>
+		</equation>
+		<equation id="Nc">
+			<parents>T40 P45 T30 P50 Nf</parents>
+			<definition lower="7373.3955078125" upper="8885.025390625">Nc=-1.18802*T40-0.320416*P45+6.49445*T30+2.67204*P50+0.638186*Nf+Normal(3772.53,4.96595)</definition>
+			<discretization>
+				<interval label="State___7373_39551___7942_79199" upper="7942.7919921875" />
+				<interval label="State___7942_79199___8045_89287" upper="8045.89287109375" />
+				<interval label="State___8045_89287___8131_20918" upper="8131.2091796875" />
+				<interval label="State___8131_20918___8186_03867" upper="8186.038671875" />
+				<interval label="State___8186_03867___8227_06836" upper="8227.068359375" />
+				<interval label="State___8227_06836___8276_48633" upper="8276.486328125" />
+				<interval label="State___8276_48633___8336_09766" upper="8336.09765625" />
+				<interval label="State___8336_09766___8407_59785" upper="8407.597851562499" />
+				<interval label="State___8407_59785___8560_57041" upper="8560.57041015625" />
+				<interval label="State___8560_57041___8885_02539" upper="8885.025390625" />
+			</discretization>
+		</equation>
+		<equation id="Wf">
+			<parents>TRA T40 P45 W22 W48 W50 phi Nc</parents>
+			<definition lower="0.6773780584335327" upper="5.638424873352051">Wf=0.000422603*TRA-0.000121438*T40+0.00159782*P45-1.9613*W22+1.23931*W48+0.786859*W50+0.000338284*phi-2.0418e-05*Nc+Normal(3.80709,0.00299997)</definition>
+			<discretization>
+				<interval label="State___0_67738___1_72651" upper="1.726508355140686" />
+				<interval label="State___1_72651___1_88314" upper="1.883141422271729" />
+				<interval label="State___1_88314___2_01866" upper="2.018662977218628" />
+				<interval label="State___2_01866___2_14534" upper="2.145337152481079" />
+				<interval label="State___2_14534___2_28908" upper="2.289078235626221" />
+				<interval label="State___2_28908___2_51507" upper="2.515067005157471" />
+				<interval label="State___2_51507___2_7691" upper="2.76909556388855" />
+				<interval label="State___2_7691___3_02767" upper="3.027674818038941" />
+				<interval label="State___3_02767___3_65906" upper="3.659058022499083" />
+				<interval label="State___3_65906___5_63842" upper="5.638424873352051" />
+			</discretization>
+		</equation>
+		<equation id="HPT_eff_mod" target="true">
+			<parents>P45 SmLPC T48</parents>
+			<definition lower="-0.01553917210549116" upper="-3.501375249470584e-05">HPT_eff_mod=3.9407e-06*P45+0.00147573*SmLPC-2.40236e-05*T48+Normal(0.00629948,0.00216559)</definition>
+			<discretization>
+				<interval label="State___neg0_01554___neg0_00323" upper="-0.003232039976865053" />
+				<interval label="State___neg0_00323___neg0_00169" upper="-0.001686267205514014" />
+				<interval label="State___neg0_00169___neg0_00108" upper="-0.001081611844711006" />
+				<interval label="State___neg0_00108___neg0_00073" upper="-0.0007276384858414531" />
+				<interval label="State___neg0_00073___neg4eneg05" upper="-3.501375249470584e-05" />
+			</discretization>
+		</equation>
+		<equation id="HPT_flow_mod" target="true">
+			<parents>W48 fan_flow_mod LPC_flow_mod HPC_flow_mod HPT_eff_mod</parents>
+			<definition lower="-0.03890805691480637" upper="0.0001104733892134391">HPT_flow_mod=-2.86005e-06*W48+0.168217*fan_flow_mod+0.0958879*LPC_flow_mod+0.249677*HPC_flow_mod+0.534526*HPT_eff_mod+Normal(0.000488624,0.00108694)</definition>
+			<discretization>
+				<interval label="State___neg0_03891___neg0_00381" upper="-0.003809591755270958" />
+				<interval label="State___neg0_00381___neg0_00177" upper="-0.0017726831138134" />
+				<interval label="State___neg0_00177___neg0_00104" upper="-0.001038075191900134" />
+				<interval label="State___neg0_00104___neg0_00049" upper="-0.0004869676195085049" />
+				<interval label="State___neg0_00049___0_00011" upper="0.0001104733892134391" />
+			</discretization>
+		</equation>
+		<equation id="LPT_eff_mod" target="true">
+			<parents>SmHPC T50 P50 fan_eff_mod fan_flow_mod LPC_flow_mod HPC_flow_mod HPT_eff_mod HPT_flow_mod</parents>
+			<definition lower="-0.02995698526501656" upper="-5.596445771516301e-05">LPT_eff_mod=-0.000310406*SmHPC-3.10621e-05*T50+4.51142e-05*P50-0.196629*fan_eff_mod+0.358855*fan_flow_mod+0.348654*LPC_flow_mod-0.5737*HPC_flow_mod+0.00934695*HPT_eff_mod+0.597255*HPT_flow_mod+Normal(0.0245047,0.00137347)</definition>
+			<discretization>
+				<interval label="State___neg0_02996___neg0_00295" upper="-0.00294981338083744" />
+				<interval label="State___neg0_00295___neg0_00165" upper="-0.001647243043407798" />
+				<interval label="State___neg0_00165___neg0_00116" upper="-0.001156128128059208" />
+				<interval label="State___neg0_00116___neg0_00081" upper="-0.0008087909081950784" />
+				<interval label="State___neg0_00081___neg6eneg05" upper="-5.596445771516301e-05" />
+			</discretization>
+		</equation>
+		<equation id="LPT_flow_mod" target="true">
+			<parents>W50 fan_eff_mod LPC_eff_mod HPC_eff_mod HPT_eff_mod HPT_flow_mod LPT_eff_mod</parents>
+			<definition lower="-0.02574549429118633" upper="-7.866245141485706e-05">LPT_flow_mod=-3.31033e-06*W50+0.26243*fan_eff_mod+0.109629*LPC_eff_mod+0.140777*HPC_eff_mod+0.344245*HPT_eff_mod-0.0113979*HPT_flow_mod+0.135249*LPT_eff_mod+Normal(8.48368e-05,0.00133464)</definition>
+			<discretization>
+				<interval label="State___neg0_02575___neg0_00369" upper="-0.003689831588417292" />
+				<interval label="State___neg0_00369___neg0_00188" upper="-0.001877273665741086" />
+				<interval label="State___neg0_00188___neg0_00115" upper="-0.001153203193098307" />
+				<interval label="State___neg0_00115___neg0_00073" upper="-0.0007311956724151969" />
+				<interval label="State___neg0_00073___neg8eneg05" upper="-7.866245141485706e-05" />
+			</discretization>
+		</equation>
+		<equation id="RUL" target="true">
+			<parents>fan_eff_mod fan_flow_mod LPC_eff_mod LPC_flow_mod HPC_eff_mod HPC_flow_mod HPT_eff_mod HPT_flow_mod LPT_eff_mod LPT_flow_mod</parents>
+			<definition lower="0" upper="94">RUL=1730.94*fan_eff_mod-139.152*fan_flow_mod-352.347*LPC_eff_mod-588.309*LPC_flow_mod+1769.98*HPC_eff_mod+1755.2*HPC_flow_mod+4089.54*HPT_eff_mod-2793.2*HPT_flow_mod+1232.1*LPT_eff_mod+823.133*LPT_flow_mod+Normal(45.7643,11.3658)</definition>
+			<discretization>
+				<interval label="State___0_0___9_4" upper="9.4" />
+				<interval label="State___9_4___18_8" upper="18.8" />
+				<interval label="State___18_8___28_2" upper="28.2" />
+				<interval label="State___28_2___37_6" upper="37.6" />
+				<interval label="State___37_6___47_0" upper="47" />
+				<interval label="State___47_0___56_4" upper="56.40000000000001" />
+				<interval label="State___56_4___65_8" upper="65.8" />
+				<interval label="State___65_8___75_2" upper="75.2" />
+				<interval label="State___75_2___84_6" upper="84.60000000000001" />
+				<interval label="State___84_6___94_0" upper="94" />
+			</discretization>
+		</equation>
+		<equation id="xdot_aircraft">
+			<parents>alt Mach TRA SmFan SmLPC SmHPC T24 P2</parents>
+			<definition lower="0.0005620824522338808" upper="0.002367995446547866">xdot_aircraft=4.97971e-08*alt+0.00273858*Mach+3.21485e-07*TRA-1.33977e-07*SmFan-1.15832e-07*SmLPC+1.08871e-08*SmHPC-5.99131e-07*T24+3.85291e-06*P2+Normal(-0.000171984,1.29855e-06)</definition>
+			<discretization>
+				<interval label="State___0_00056___0_00112" upper="0.001121397712267935" />
+				<interval label="State___0_00112___0_00129" upper="0.001291112462058664" />
+				<interval label="State___0_00129___0_00144" upper="0.001440487231593579" />
+				<interval label="State___0_00144___0_00157" upper="0.001573798595927656" />
+				<interval label="State___0_00157___0_00169" upper="0.001692910678684711" />
+				<interval label="State___0_00169___0_00182" upper="0.001817679381929338" />
+				<interval label="State___0_00182___0_00195" upper="0.001947878627106547" />
+				<interval label="State___0_00195___0_00205" upper="0.002047593984752893" />
+				<interval label="State___0_00205___0_00218" upper="0.002179439412429929" />
+				<interval label="State___0_00218___0_00237" upper="0.002367995446547866" />
+			</discretization>
+		</equation>
+		<equation id="rho2">
+			<parents>T2 W21 P2 Ps30 xdot_aircraft FANPR LPCPR LPTPR</parents>
+			<definition lower="0.0004509151331149042" upper="0.001215194119140506">rho2=2.08802e-06*T2+4.59675e-08*W21+8.43787e-06*P2-1.13612e-08*Ps30-0.0321472*xdot_aircraft+2.14083e-05*FANPR-2.44198e-06*LPCPR+3.75372e-05*LPTPR+Normal(-0.0002756,3.58958e-07)</definition>
+			<discretization>
+				<interval label="State___0_00045___0_00062" upper="0.0006199504714459181" />
+				<interval label="State___0_00062___0_00068" upper="0.0006846152478829026" />
+				<interval label="State___0_00068___0_00073" upper="0.0007319289725273848" />
+				<interval label="State___0_00073___0_00079" upper="0.0007865677354857327" />
+				<interval label="State___0_00079___0_00087" upper="0.0008705361979082227" />
+				<interval label="State___0_00087___0_00094" upper="0.0009409374091774226" />
+				<interval label="State___0_00094___0_001" upper="0.0009959511226043105" />
+				<interval label="State___0_001___0_00104" upper="0.001039268681779504" />
+				<interval label="State___0_00104___0_00112" upper="0.001118033169768751" />
+				<interval label="State___0_00112___0_00122" upper="0.001215194119140506" />
+			</discretization>
+		</equation>
+		<equation id="a">
+			<parents>alt Mach T2 W21 SmLPC P2 P50 rho2</parents>
+			<definition lower="306.9378051757812" upper="342.2867431640625">a=-1.13548e-05*alt-0.669344*Mach+0.667119*T2-0.000191586*W21-0.00473534*SmLPC-0.0573609*P2+0.00543244*P50+825.771*rho2+Normal(152.496,0.0072011)</definition>
+			<discretization>
+				<interval label="State___306_93781___320_17233" upper="320.1723327636719" />
+				<interval label="State___320_17233___323_41367" upper="323.4136657714844" />
+				<interval label="State___323_41367___325_5145" upper="325.5144958496094" />
+				<interval label="State___325_5145___327_67792" upper="327.6779174804688" />
+				<interval label="State___327_67792___330_97974" upper="330.979736328125" />
+				<interval label="State___330_97974___333_34576" upper="333.3457641601562" />
+				<interval label="State___333_34576___335_20081" upper="335.2008056640625" />
+				<interval label="State___335_20081___336_53253" upper="336.5325317382812" />
+				<interval label="State___336_53253___338_36884" upper="338.3688354492188" />
+				<interval label="State___338_36884___342_28674" upper="342.2867431640625" />
+			</discretization>
+		</equation>
+		<equation id="HPTPR">
+			<parents>T40 P45 T48 Ps30 P40 HPC_flow_mod HPT_flow_mod</parents>
+			<definition lower="0.1792449504137039" upper="0.1911150366067886">HPTPR=8.60691e-06*T40+0.000440742*P45+9.07899e-06*T48-0.000197711*Ps30+0.00011086*P40-0.00650475*HPC_flow_mod-0.0267558*HPT_flow_mod+Normal(0.167589,0.000153072)</definition>
+			<discretization>
+				<interval label="State___0_17924___0_18271" upper="0.1827058777213097" />
+				<interval label="State___0_18271___0_18376" upper="0.1837565422058106" />
+				<interval label="State___0_18376___0_18432" upper="0.1843201369047165" />
+				<interval label="State___0_18432___0_18499" upper="0.1849899083375931" />
+				<interval label="State___0_18499___0_18546" upper="0.1854564249515533" />
+				<interval label="State___0_18546___0_18592" upper="0.185915133357048" />
+				<interval label="State___0_18592___0_18625" upper="0.1862490624189377" />
+				<interval label="State___0_18625___0_18644" upper="0.186442106962204" />
+				<interval label="State___0_18644___0_18661" upper="0.1866106390953064" />
+				<interval label="State___0_18661___0_19112" upper="0.1911150366067886" />
+			</discretization>
+		</equation>
+		<equation id="rho24">
+			<parents>P30 P45 W22 T24 P24 P40 P50 Wf LPCPR rho2</parents>
+			<definition lower="0.0006177115719765425" upper="0.001799123012460768">rho24=-1.94277e-07*P30-2.10877e-07*P45+4.63462e-06*W22+9.99033e-07*T24-8.0427e-07*P24+1.65385e-07*P40-6.64612e-07*P50+6.04254e-05*Wf+0.000217032*LPCPR+0.971027*rho2+Normal(-0.00048725,1.6024e-06)</definition>
+			<discretization>
+				<interval label="State___0_00062___0_00089" upper="0.0008931531163398176" />
+				<interval label="State___0_00089___0_00097" upper="0.0009675220819190145" />
+				<interval label="State___0_00097___0_00103" upper="0.00102709261700511" />
+				<interval label="State___0_00103___0_00109" upper="0.001093347417190671" />
+				<interval label="State___0_00109___0_00119" upper="0.001187408692203462" />
+				<interval label="State___0_00119___0_00125" upper="0.001252565952017903" />
+				<interval label="State___0_00125___0_00132" upper="0.001322977861855179" />
+				<interval label="State___0_00132___0_00138" upper="0.001384375290945172" />
+				<interval label="State___0_00138___0_00146" upper="0.001464286155533046" />
+				<interval label="State___0_00146___0_0018" upper="0.001799123012460768" />
+			</discretization>
+		</equation>
+		<equation id="rho48">
+			<parents>P30 P45 W48 W50 T48 P24 Ps30 P40 Wf rho2 rho24</parents>
+			<definition lower="0.0005209705559536815" upper="0.001893782056868076">rho48=1.04459e-06*P30+3.30827e-06*P45+6.59933e-05*W48-6.06965e-05*W50-6.14419e-08*T48-4.73879e-06*P24-2.88891e-06*Ps30+1.98507e-06*P40-0.000206261*Wf+0.0170539*rho2+0.533055*rho24+Normal(6.76343e-05,1.00743e-06)</definition>
+			<discretization>
+				<interval label="State___0_00052___0_00088" upper="0.0008822646748740226" />
+				<interval label="State___0_00088___0_00094" upper="0.0009407979086972773" />
+				<interval label="State___0_00094___0_001" upper="0.001003692939411849" />
+				<interval label="State___0_001___0_00106" upper="0.001055193413048983" />
+				<interval label="State___0_00106___0_00112" upper="0.001121138804592192" />
+				<interval label="State___0_00112___0_00119" upper="0.001187241496518254" />
+				<interval label="State___0_00119___0_00125" upper="0.001254939858336002" />
+				<interval label="State___0_00125___0_00134" upper="0.00133538672234863" />
+				<interval label="State___0_00134___0_00146" upper="0.001455565518699586" />
+				<interval label="State___0_00146___0_00189" upper="0.001893782056868076" />
+			</discretization>
+		</equation>
+		<equation id="rho50">
+			<parents>W50 T50 P2 P24 P50 xdot_aircraft LPTPR rho2 rho48</parents>
+			<definition lower="0.0001921316870721057" upper="0.000558031490072608">rho50=-5.92017e-06*W50-7.13511e-08*T50-7.96844e-07*P2-2.26156e-06*P24+4.569e-06*P50+0.0238071*xdot_aircraft+0.000347528*LPTPR+0.123945*rho2+0.66092*rho48+Normal(-0.000126603,1.4973e-06)</definition>
+			<discretization>
+				<interval label="State___0_00019___0_00025" upper="0.0002517279179301113" />
+				<interval label="State___0_00025___0_00028" upper="0.0002803504816256463" />
+				<interval label="State___0_00028___0_0003" upper="0.0003035844914847985" />
+				<interval label="State___0_0003___0_00033" upper="0.0003296528186183423" />
+				<interval label="State___0_00033___0_00037" upper="0.0003700775851029903" />
+				<interval label="State___0_00037___0_00041" upper="0.0004081330611370504" />
+				<interval label="State___0_00041___0_00043" upper="0.0004341918916907161" />
+				<interval label="State___0_00043___0_00047" upper="0.0004669238929636777" />
+				<interval label="State___0_00047___0_00051" upper="0.0005094686173833906" />
+				<interval label="State___0_00051___0_00056" upper="0.000558031490072608" />
+			</discretization>
+		</equation>
+		<equation id="xdot2">
+			<parents>T2 LPC_eff_mod xdot_aircraft rho2</parents>
+			<definition lower="0.001044748350977898" upper="0.996018648147583">xdot2=0.0141131*T2-0.143379*LPC_eff_mod+39.079*xdot_aircraft+299.94*rho2+Normal(-3.54873,0.0222569)</definition>
+			<discretization>
+				<interval label="State___0_00104___0_33562" upper="0.3356241106987" />
+				<interval label="State___0_33562___0_40709" upper="0.4070885539054871" />
+				<interval label="State___0_40709___0_4666" upper="0.4666014313697815" />
+				<interval label="State___0_4666___0_53312" upper="0.5331152677536011" />
+				<interval label="State___0_53312___0_62806" upper="0.628057062625885" />
+				<interval label="State___0_62806___0_69827" upper="0.6982654333114624" />
+				<interval label="State___0_69827___0_75229" upper="0.7522923946380615" />
+				<interval label="State___0_75229___0_79598" upper="0.795983350276947" />
+				<interval label="State___0_79598___0_85158" upper="0.851584792137146" />
+				<interval label="State___0_85158___0_99602" upper="0.996018648147583" />
+			</discretization>
+		</equation>
+		<equation id="xdot24">
+			<parents>T24 P24 Nc rho24 xdot2</parents>
+			<definition lower="0.00030226242961362" upper="0.9998148083686829">xdot24=0.00294871*T24+0.00486168*P24+0.000369343*Nc-644.557*rho24+0.415584*xdot2+Normal(-3.43427,0.0261594)</definition>
+			<discretization>
+				<interval label="State___0_0003___0_38296" upper="0.3829637914896011" />
+				<interval label="State___0_38296___0_43057" upper="0.430571585893631" />
+				<interval label="State___0_43057___0_4656" upper="0.4656009405851364" />
+				<interval label="State___0_4656___0_49732" upper="0.4973229289054871" />
+				<interval label="State___0_49732___0_53181" upper="0.5318144857883453" />
+				<interval label="State___0_53181___0_57262" upper="0.5726225018501282" />
+				<interval label="State___0_57262___0_61834" upper="0.6183415293693542" />
+				<interval label="State___0_61834___0_67519" upper="0.6751911401748657" />
+				<interval label="State___0_67519___0_76031" upper="0.7603107571601867" />
+				<interval label="State___0_76031___0_99981" upper="0.9998148083686829" />
+			</discretization>
+		</equation>
+		<equation id="xdot30">
+			<parents>P30 T30 Nc FANPR rho24 rho30 rho48 xdot24</parents>
+			<definition lower="0.001317430753260851" upper="0.9994224309921265">xdot30=-0.000125587*P30+0.00388167*T30+9.9914e-06*Nc+0.0188133*FANPR-29.1413*rho24+36.3074*rho30-30.5769*rho48+0.0239002*xdot24+Normal(-2.41652,0.00111528)</definition>
+			<discretization>
+				<interval label="State___0_00132___0_39521" upper="0.3952143311500549" />
+				<interval label="State___0_39521___0_4592" upper="0.4591992497444153" />
+				<interval label="State___0_4592___0_51153" upper="0.5115306496620178" />
+				<interval label="State___0_51153___0_54657" upper="0.5465678691864013" />
+				<interval label="State___0_54657___0_57264" upper="0.5726379156112671" />
+				<interval label="State___0_57264___0_60544" upper="0.6054410934448242" />
+				<interval label="State___0_60544___0_64445" upper="0.6444460690021515" />
+				<interval label="State___0_64445___0_69183" upper="0.6918336153030396" />
+				<interval label="State___0_69183___0_79216" upper="0.7921552240848541" />
+				<interval label="State___0_79216___0_99942" upper="0.9994224309921265" />
+			</discretization>
+		</equation>
+		<equation id="xdot48">
+			<parents>P45 W48 T30 HPCPR rho48 xdot2 xdot24 xdot30</parents>
+			<definition lower="0.1434938311576843" upper="0.9995176196098328">xdot48=0.00179704*P45-0.00427381*W48-0.00531477*T30-0.0372573*HPCPR-360.326*rho48+0.402601*xdot2-1.53785*xdot24+3.70398*xdot30+Normal(3.81871,0.00762271)</definition>
+			<discretization>
+				<interval label="State___0_14349___0_49728" upper="0.4972799122333527" />
+				<interval label="State___0_49728___0_56116" upper="0.5611599206924439" />
+				<interval label="State___0_56116___0_61096" upper="0.6109567880630493" />
+				<interval label="State___0_61096___0_64009" upper="0.6400875568389893" />
+				<interval label="State___0_64009___0_66994" upper="0.669935017824173" />
+				<interval label="State___0_66994___0_70433" upper="0.7043257355690002" />
+				<interval label="State___0_70433___0_72927" upper="0.7292664110660553" />
+				<interval label="State___0_72927___0_77075" upper="0.7707466125488281" />
+				<interval label="State___0_77075___0_83727" upper="0.8372700095176697" />
+				<interval label="State___0_83727___0_99952" upper="0.9995176196098328" />
+			</discretization>
+		</equation>
+		<equation id="xdot50">
+			<parents>W50 P50 LPC_flow_mod HPC_eff_mod HPTPR rho30 rho50 xdot2 xdot24 xdot30 xdot48</parents>
+			<definition lower="0.1417845189571381" upper="0.9974069595336914">xdot50=-0.00692076*W50-0.0112868*P50-1.19483*LPC_flow_mod-2.38355*HPC_eff_mod-2.88145*HPTPR+125.794*rho30+2717.65*rho50-0.332265*xdot2+0.493189*xdot24-1.14224*xdot30+1.46578*xdot48+Normal(0.0483498,0.00953742)</definition>
+			<discretization>
+				<interval label="State___0_14178___0_4908" upper="0.4908026278018952" />
+				<interval label="State___0_4908___0_53157" upper="0.5315745353698731" />
+				<interval label="State___0_53157___0_57399" upper="0.5739866137504578" />
+				<interval label="State___0_57399___0_61172" upper="0.6117220282554626" />
+				<interval label="State___0_61172___0_64052" upper="0.6405244767665863" />
+				<interval label="State___0_64052___0_66493" upper="0.6649296045303345" />
+				<interval label="State___0_66493___0_69735" upper="0.697345221042633" />
+				<interval label="State___0_69735___0_73372" upper="0.7337178707122803" />
+				<interval label="State___0_73372___0_79309" upper="0.7930865228176117" />
+				<interval label="State___0_79309___0_99741" upper="0.9974069595336914" />
+			</discretization>
+		</equation>
+		<equation id="Nf_prev">
+			<parents>P50 Nf FANPR LPCPR HPCPR xdot48</parents>
+			<definition lower="1483.326538085938" upper="2290.162353515625">Nf_prev=-0.180715*P50+1.13063*Nf+283.937*FANPR-433.851*LPCPR-17.7574*HPCPR-2.74713*xdot48+Normal(197.15,13.7015)</definition>
+			<discretization>
+				<interval label="State___1483_32654___1645_97876" upper="1645.978759765625" />
+				<interval label="State___1645_97876___1809_56147" upper="1809.561474609375" />
+				<interval label="State___1809_56147___1890_31022" upper="1890.310217285156" />
+				<interval label="State___1890_31022___1970_60474" upper="1970.604736328125" />
+				<interval label="State___1970_60474___2014_33374" upper="2014.333740234375" />
+				<interval label="State___2014_33374___2058_80732" upper="2058.80732421875" />
+				<interval label="State___2058_80732___2097_87205" upper="2097.872045898438" />
+				<interval label="State___2097_87205___2133_19878" upper="2133.198779296875" />
+				<interval label="State___2133_19878___2159_76929" upper="2159.769287109375" />
+				<interval label="State___2159_76929___2290_16235" upper="2290.162353515625" />
+			</discretization>
+		</equation>
+		<equation id="Nc_prev">
+			<parents>SmHPC T48 Nc HPCPR xdot24 Nf_prev</parents>
+			<definition lower="7373.3955078125" upper="8885.025390625">Nc_prev=-12.9785*SmHPC-0.924502*T48+1.11824*Nc-47.1484*HPCPR+5.51221*xdot24+0.415677*Nf_prev+Normal(167.362,13.8791)</definition>
+			<discretization>
+				<interval label="State___7373_39551___7942_79199" upper="7942.7919921875" />
+				<interval label="State___7942_79199___8046_3542" upper="8046.35419921875" />
+				<interval label="State___8046_3542___8131_74106" upper="8131.741064453125" />
+				<interval label="State___8131_74106___8186_46367" upper="8186.463671875" />
+				<interval label="State___8186_46367___8227_42383" upper="8227.423828125" />
+				<interval label="State___8227_42383___8277_02148" upper="8277.021484375" />
+				<interval label="State___8277_02148___8336_71611" upper="8336.716113281251" />
+				<interval label="State___8336_71611___8408_54492" upper="8408.544921875" />
+				<interval label="State___8408_54492___8562_14092" upper="8562.140917968751" />
+				<interval label="State___8562_14092___8885_02539" upper="8885.025390625" />
+			</discretization>
+		</equation>
+		<equation id="alt_diff">
+			<parents>SmFan SmLPC SmHPC T50 FANPR HPCPR LPTPR Nf_prev</parents>
+			<definition lower="-81.8349609375" upper="88.1435546875">alt_diff=1.64266*SmFan-0.561461*SmLPC+2.48552*SmHPC+0.112435*T50+106.262*FANPR+17.1569*HPCPR+522.4*LPTPR+0.0358793*Nf_prev+Normal(-767.607,5.93801)</definition>
+			<discretization>
+				<interval label="State___neg81_83496___neg20_96924" upper="-20.96923828125" />
+				<interval label="State___neg20_96924___neg14_90393" upper="-14.9039306640625" />
+				<interval label="State___neg14_90393___neg3_16943" upper="-3.16943359375" />
+				<interval label="State___neg3_16943___neg0_33496" upper="-0.3349609375" />
+				<interval label="State___neg0_33496___0_0" upper="0" />
+				<interval label="State___0_0___0_30469" upper="0.3046875" />
+				<interval label="State___0_30469___2_49927" upper="2.499267578125" />
+				<interval label="State___2_49927___13_04541" upper="13.04541015625" />
+				<interval label="State___13_04541___21_70068" upper="21.70068359375" />
+				<interval label="State___21_70068___88_14355" upper="88.1435546875" />
+			</discretization>
+		</equation>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.0.10@8fc4651c837e" name="Unnamed">
+			<node id="alt">
+				<name>alt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Mach">
+				<name>Mach</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="TRA">
+				<name>TRA</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T2">
+				<name>T2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T40">
+				<name>T40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P30">
+				<name>P30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P45">
+				<name>P45</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W21">
+				<name>W21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W22">
+				<name>W22</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W25">
+				<name>W25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W31">
+				<name>W31</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W32">
+				<name>W32</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W48">
+				<name>W48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W50">
+				<name>W50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmFan">
+				<name>SmFan</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmLPC">
+				<name>SmLPC</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="SmHPC">
+				<name>SmHPC</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="phi">
+				<name>phi</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T24">
+				<name>T24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T30">
+				<name>T30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T48">
+				<name>T48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T50">
+				<name>T50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P15">
+				<name>P15</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P2">
+				<name>P2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P21">
+				<name>P21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P24">
+				<name>P24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Ps30">
+				<name>Ps30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P40">
+				<name>P40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P50">
+				<name>P50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nf">
+				<name>Nf</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nc">
+				<name>Nc</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Wf">
+				<name>Wf</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="fan_eff_mod">
+				<name>fan_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="fan_flow_mod">
+				<name>fan_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPC_eff_mod">
+				<name>LPC_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPC_flow_mod">
+				<name>LPC_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPC_eff_mod">
+				<name>HPC_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPC_flow_mod">
+				<name>HPC_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPT_eff_mod">
+				<name>HPT_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPT_flow_mod">
+				<name>HPT_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPT_eff_mod">
+				<name>LPT_eff_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPT_flow_mod">
+				<name>LPT_flow_mod</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="RUL">
+				<name>RUL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="a">
+				<name>a</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot_aircraft">
+				<name>xdot_aircraft</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="FANPR">
+				<name>FANPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPCPR">
+				<name>LPCPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPCPR">
+				<name>HPCPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="HPTPR">
+				<name>HPTPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LPTPR">
+				<name>LPTPR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho2">
+				<name>rho2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho24">
+				<name>rho24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho30">
+				<name>rho30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho48">
+				<name>rho48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="rho50">
+				<name>rho50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot2">
+				<name>xdot2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot24">
+				<name>xdot24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot30">
+				<name>xdot30</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot48">
+				<name>xdot48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="xdot50">
+				<name>xdot50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nf_prev">
+				<name>Nf_prev</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nc_prev">
+				<name>Nc_prev</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="alt_diff">
+				<name>alt_diff</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
