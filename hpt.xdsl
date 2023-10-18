@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<equation id="P40">
+			<definition lower="567.80810546875" upper="3171.822509765625">P40=Normal(1643.54,407.612)</definition>
+			<discretization>
+				<interval label="State___567_80811___828_20955" upper="828.2095458984375" />
+				<interval label="State___828_20955___1088_61099" upper="1088.610986328125" />
+				<interval label="State___1088_61099___1349_01243" upper="1349.012426757813" />
+				<interval label="State___1349_01243___1609_41387" upper="1609.4138671875" />
+				<interval label="State___1609_41387___1869_81531" upper="1869.815307617188" />
+				<interval label="State___1869_81531___2130_21675" upper="2130.216748046875" />
+				<interval label="State___2130_21675___2390_61819" upper="2390.618188476563" />
+				<interval label="State___2390_61819___2651_01963" upper="2651.01962890625" />
+				<interval label="State___2651_01963___2911_42107" upper="2911.421069335938" />
+				<interval label="State___2911_42107___3171_82251" upper="3171.822509765625" />
+			</discretization>
+		</equation>
+		<equation id="T40">
+			<definition lower="1086.054077148438" upper="1672.981689453125">T40=Normal(1408.17,97.1601)</definition>
+			<discretization>
+				<interval label="State___1074_50562___1136_04312" upper="1136.043115234375" />
+				<interval label="State___1136_04312___1197_58062" upper="1197.580615234375" />
+				<interval label="State___1197_58062___1259_11812" upper="1259.118115234375" />
+				<interval label="State___1259_11812___1320_65562" upper="1320.655615234375" />
+				<interval label="State___1320_65562___1382_19312" upper="1382.193115234375" />
+				<interval label="State___1382_19312___1443_73062" upper="1443.730615234375" />
+				<interval label="State___1443_73062___1505_26812" upper="1505.268115234375" />
+				<interval label="State___1505_26812___1566_80562" upper="1566.805615234375" />
+				<interval label="State___1566_80562___1628_34312" upper="1628.343115234375" />
+				<interval label="State___1628_34312___1689_88062" upper="1672.981689453125" />
+			</discretization>
+		</equation>
+		<equation id="P45">
+			<parents>P40</parents>
+			<definition lower="103.1398544311523" upper="593.9244995117188">P45=0.187772*P40+Normal(-4.23412,2.01994)</definition>
+			<discretization>
+				<interval label="State___103_13985___152_21832" upper="152.218318939209" />
+				<interval label="State___152_21832___201_29678" upper="201.2967834472656" />
+				<interval label="State___201_29678___250_37525" upper="250.3752479553223" />
+				<interval label="State___250_37525___299_45371" upper="299.4537124633789" />
+				<interval label="State___299_45371___348_53218" upper="348.5321769714355" />
+				<interval label="State___348_53218___397_61064" upper="397.6106414794922" />
+				<interval label="State___397_61064___446_68911" upper="446.6891059875488" />
+				<interval label="State___446_68911___495_76757" upper="495.7675704956055" />
+				<interval label="State___495_76757___544_84604" upper="544.8460350036621" />
+				<interval label="State___544_84604___593_9245" upper="593.9244995117188" />
+			</discretization>
+		</equation>
+		<equation id="T48">
+			<parents>T40 P45</parents>
+			<definition lower="688.0791015625" upper="1093.130493164062">T48=0.682388*T40+0.0120878*P45+Normal(-55.8836,0.382769)</definition>
+			<discretization>
+				<interval label="State___682_59387___725_00396" upper="725.003955078125" />
+				<interval label="State___725_00396___767_41404" upper="767.4140380859375" />
+				<interval label="State___767_41404___809_82412" upper="809.82412109375" />
+				<interval label="State___809_82412___852_2342" upper="852.2342041015625" />
+				<interval label="State___852_2342___894_64429" upper="894.644287109375" />
+				<interval label="State___894_64429___937_05437" upper="937.0543701171875" />
+				<interval label="State___937_05437___979_46445" upper="979.4644531250001" />
+				<interval label="State___979_46445___1021_87454" upper="1021.874536132813" />
+				<interval label="State___1021_87454___1064_28462" upper="1064.284619140625" />
+				<interval label="State___1064_28462___1106_6947" upper="1093.130493164062" />
+			</discretization>
+		</equation>
+		<equation id="W25">
+			<definition lower="31.8054256439209" upper="135.4580993652344">W25=Normal(77.3788,16.5161)</definition>
+			<discretization>
+				<interval label="State___31_80543___42_17069" upper="42.17069301605225" />
+				<interval label="State___42_17069___52_53596" upper="52.5359603881836" />
+				<interval label="State___52_53596___62_90123" upper="62.90122776031494" />
+				<interval label="State___62_90123___73_2665" upper="73.26649513244629" />
+				<interval label="State___73_2665___83_63176" upper="83.63176250457764" />
+				<interval label="State___83_63176___93_99703" upper="93.99702987670898" />
+				<interval label="State___93_99703___104_3623" upper="104.3622972488403" />
+				<interval label="State___104_3623___114_72756" upper="114.7275646209717" />
+				<interval label="State___114_72756___125_09283" upper="125.092831993103" />
+				<interval label="State___125_09283___135_4581" upper="135.4580993652344" />
+			</discretization>
+		</equation>
+		<equation id="W48">
+			<parents>P45 T48 W25</parents>
+			<definition lower="28.58130264282227" upper="128.7782287597656">W48=0.0104627*P45-0.000185566*T48+0.917645*W25+Normal(-1.54559,0.00343501)</definition>
+			<discretization>
+				<interval label="State___28_5813___38_601" upper="38.6009952545166" />
+				<interval label="State___38_601___48_62069" upper="48.62068786621094" />
+				<interval label="State___48_62069___58_64038" upper="58.64038047790527" />
+				<interval label="State___58_64038___68_66007" upper="68.66007308959961" />
+				<interval label="State___68_66007___78_67977" upper="78.67976570129395" />
+				<interval label="State___78_67977___88_69946" upper="88.69945831298827" />
+				<interval label="State___88_69946___98_71915" upper="98.71915092468261" />
+				<interval label="State___98_71915___108_73884" upper="108.7388435363769" />
+				<interval label="State___108_73884___118_75854" upper="118.7585361480713" />
+				<interval label="State___118_75854___128_77823" upper="128.7782287597656" />
+			</discretization>
+		</equation>
+		<equation id="Nf">
+			<parents>P45 P40</parents>
+			<definition lower="1486.94384765625" upper="2288.849609375">Nf=78.5639*P45-14.5583*P40+Normal(1977.65,44.9773)</definition>
+			<discretization>
+				<interval label="State___1483_32654___1564_01012" upper="1564.010119628906" />
+				<interval label="State___1564_01012___1644_6937" upper="1644.693701171875" />
+				<interval label="State___1644_6937___1725_37728" upper="1725.377282714844" />
+				<interval label="State___1725_37728___1806_06086" upper="1806.060864257812" />
+				<interval label="State___1806_06086___1886_74445" upper="1886.744445800781" />
+				<interval label="State___1886_74445___1967_42803" upper="1967.42802734375" />
+				<interval label="State___1967_42803___2048_11161" upper="2048.111608886719" />
+				<interval label="State___2048_11161___2128_79519" upper="2128.795190429687" />
+				<interval label="State___2128_79519___2209_47877" upper="2209.478771972656" />
+				<interval label="State___2209_47877___2290_16235" upper="2288.849609375" />
+			</discretization>
+		</equation>
+		<equation id="Nc">
+			<parents>P45 P40</parents>
+			<definition lower="7373.3955078125" upper="8885.025390625">Nc=51.2498*P45-9.15177*P40+Normal(7681,43.1307)</definition>
+			<discretization>
+				<interval label="State___7373_39551___7524_5585" upper="7524.55849609375" />
+				<interval label="State___7524_5585___7675_72148" upper="7675.721484375" />
+				<interval label="State___7675_72148___7826_88447" upper="7826.88447265625" />
+				<interval label="State___7826_88447___7978_04746" upper="7978.0474609375" />
+				<interval label="State___7978_04746___8129_21045" upper="8129.21044921875" />
+				<interval label="State___8129_21045___8280_37344" upper="8280.3734375" />
+				<interval label="State___8280_37344___8431_53643" upper="8431.536425781251" />
+				<interval label="State___8431_53643___8582_69941" upper="8582.699414062499" />
+				<interval label="State___8582_69941___8733_8624" upper="8733.86240234375" />
+				<interval label="State___8733_8624___8885_02539" upper="8885.025390625" />
+			</discretization>
+		</equation>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.0.10@8fc4651c837e" name="Unnamed">
+			<node id="P40">
+				<name>P40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T40">
+				<name>T40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="T48">
+				<name>T48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="P45">
+				<name>P45</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W25">
+				<name>W25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="W48">
+				<name>W48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nf">
+				<name>Nf</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Nc">
+				<name>Nc</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
